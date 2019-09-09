@@ -8,7 +8,11 @@ country_event = { #Jianzhou - Ginseng Production
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
+	trigger = {
+		
+	}
+
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -1089,7 +1093,7 @@ country_event = { #Ministry of Revenue event chain - 2 (Silk, Dyes, and Paper St
 		}
 	}
 	
-	#The Imperial Silk Factories of Kangxi in China, 1661-1722 A mirror for Louis XIV’s Royal Factories?
+	#The Imperial Silk Factories of Kangxi in China, 1661-1722 A mirror for Louis XIVï¿½s Royal Factories?
 	#Li Wang
 	#pg. 20
 	
@@ -1361,7 +1365,7 @@ country_event = { #Ministry of Revenue event chain - 3 (Implementing the Sheng-k
 	}
 }
 
-country_event = { #Ministry of Rites event chain - 1
+country_event = { #Ministry of Rites event chain - 1 (lavish envoys)
 	id = ME_Manchu_Events.24
 	title = ME_Manchu_Events.24.t
 	desc = ME_Manchu_Events.24.d
@@ -1387,10 +1391,41 @@ country_event = { #Ministry of Rites event chain - 1
 		}
 	}
 	
-	option = { #different tax plan
-		name = ME_Manchu_Events.23.a
+	option = { #reduce visits
+		name = ME_Manchu_Events.24.a
 		
+		add_country_modifier = {
+			name = QNG_less_tributes #+5 tax eff
+			duration = 36500
+		}
 		
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = tributary_state
+			}
+			add_liberty_desire = -20
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					which = reformChainProgress
+					value = 3
+				}
+			}
+			clr_country_flag = reformed_ministry_rites
+			set_country_flag = finished_rites_event_chain_flag
+			custom_tooltip =  completed_ministry_rites_chain_tooltip
+		}
+	}
+
+	option = { #dont
+		name = ME_Manchu_Events.24.b
+		
+		hidden_effect = {
+			set_country_flag = qng_lavish_envoys
+		}
+		custom_tooltip = qng_sometimes_envoy_events
 		
 		if = {
 			limit = {
@@ -1473,7 +1508,7 @@ country_event = { #tibetan rule
 					NOT = { is_year = 1505 }
 				}
 				define_ruler = {
-					name = "Sönam"
+					name = "Sï¿½nam"
 					dynasty = "Choklang"
 				}
 			}
@@ -1484,7 +1519,7 @@ country_event = { #tibetan rule
 				}
 				define_ruler = {
 					name = "Ensapa Lobsang"
-					dynasty = "Döndrup"
+					dynasty = "Dï¿½ndrup"
 				}
 			}
 			else_if = {
@@ -1493,7 +1528,7 @@ country_event = { #tibetan rule
 					NOT = { is_year = 1662 }
 				}
 				define_ruler = {
-					name = "Lobsang Chökyi"
+					name = "Lobsang Chï¿½kyi"
 					dynasty = "Gyalsten"
 				}
 			}
@@ -2668,5 +2703,55 @@ province_event = { #salt monopoly - new salt stations
 		
 		custom_tooltip = qng_salt_station_tt2
 		add_province_triggered_modifier = QNG_salt_stations
+	}
+}
+
+country_event = { #envoy event 1 (enabled by .24)
+	id = ME_Manchu_Events.44
+	title = ME_Manchu_Events.44.t
+	desc = ME_Manchu_Events.44.d
+	picture = COURT_eventPicture
+	
+	trigger = {
+		tag = QNG
+		has_country_flag = qng_lavish_envoys
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		random_subject_country = {
+			limit = {
+				is_subject_of_type = tributary_state
+			}
+			save_event_target_as = qng_big_tibute_target
+		}
+	}
+
+	option = { #recieve them with full honors
+		name = ME_Manchu_Events.44.a
+		
+		add_prestige = 5
+		add_years_of_income = -0.15
+		event_target:qng_big_tibute_target = {
+			add_prestige = 10
+			add_liberty_desire = -10
+		}
+		add_ruler_modifier = {
+			name = QNG_generous_host
+			duration = -1
+		}
+	}
+
+	option = { #no obligation
+		name = ME_Manchu_Events.44.a
+		
+		add_prestige = -5
+		
+		event_target:qng_big_tibute_target = {
+			add_prestige = 10
+		}
 	}
 }

@@ -136,10 +136,11 @@ l_english:
  ME_Manchu_Events.23.a: "Sounds reasonable..."
  ME_Manchu_Events.23.b: "It could be expensive... Find a generalized tax rate."
  
- ME_Manchu_Events.24.t: "a"
- ME_Manchu_Events.24.d: "bbb"
- ME_Manchu_Events.24.a: "vv"
- ME_Manchu_Events.24.b: "ss"
+ ME_Manchu_Events.24.t: "Costly Tributary Visits"
+ ME_Manchu_Events.24.d: "A great many kingdoms and states reognize the supremacy of the Qing Empire and willingly pay tribute to the Emperor. Depending on the subject, they may send an envoy to [Root.Capital.GetName] anually or perhaps every five years. Being the prosperous empire that we are, it is expected that we should recieve these guests with proper hospitality. Great gifts are exchanged on behalf of these visiting dignitaries and lavish accomodations are provided; neither of these come free. It has come to the attention of the Board of Rites that these expenses are contiuning to mount..."
+ ME_Manchu_Events.24.a: "Call for a reduction of tributary visits."
+ ME_Manchu_Events.24.b: "No need to be so stingy."
+ qng_sometimes_envoy_events: "Occassional envoy events will occur"
  
  ME_Manchu_Events.25.t: "Invasion of Taiwan"
  ME_Manchu_Events.25.d: "Several former Ming princes tried to hold onto the land, but were overrun by out might. The dozen or so remaining princes were treated with honor and were sent to live out their lives in the capital. While that may suffice for the nobility, the people are another story, as they look on their new overlords with suspicion. Perhaps we can extend an offer of peace to them?"
@@ -235,6 +236,11 @@ l_english:
  ME_Manchu_Events.43.d: "Our new expansion seems to have a granted us access to new salt stores. Time to hand them off to the proper merchants."
  ME_Manchu_Events.43.a: "Excellent!"
  qng_salt_station_tt2: "[Root.GetName] gets receives triggered-modifier '§YSalt Stations§!' until the end of the game."
+
+ ME_Manchu_Events.44.t: "Great Envoys from [qng_big_tribute_target.GetName]"
+ ME_Manchu_Events.44.d: "Envoys from [qng_big_tribute_target.GetName] have arrived in [Root.Capital.GetName] bearing their annual tribute. They have arrived with a full escort of royal servants and and all number of extravagant decorations. The court servants do their duties diligently and greet them in kind, but ministers - especially those well aware of the finances - may have something to say of this."
+ ME_Manchu_Events.44.a: "It's clear they've made an effort to come here, we should return the favor."
+ ME_Manchu_Events.44.tb: "The pageantry is apprecaited, but it was their choice."
  
 #modifiers
  MCH_unification_ambitions: "Unite the Tribes"
@@ -446,6 +452,12 @@ l_english:
  
  MCH_colonial_aspirations_2: "State Funded Expeditions"
  desc_MCH_colonial_aspirations_2: "Somewhere, beyond the sea..."
+
+ QNG_less_tributes: "Reduced Tributary Envoys"
+ desc_QNG_less_tributes: "We can't afford all these parties!"
+
+ QNG_generous_host: "Generous Host"
+ desc_QNG_generous_host: "This guy hosts some great parties."
  
  #decisions
  QNG_great_clearance_title: "The Great Clearance"

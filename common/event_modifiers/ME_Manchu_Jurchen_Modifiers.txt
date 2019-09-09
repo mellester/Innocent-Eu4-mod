@@ -419,3 +419,11 @@ QNG_navy_sailors = {
 MCH_shogun = {
 	max_states = 1
 }
+
+QNG_generous_host = {
+	diplomatic_reputation = 1
+}
+
+QNG_less_tributes = {
+	global_tax_modifier = 0.05
+}
