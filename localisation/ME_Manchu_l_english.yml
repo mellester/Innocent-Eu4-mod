@@ -240,7 +240,16 @@ l_english:
  ME_Manchu_Events.44.t: "Great Envoys from [qng_big_tribute_target.GetName]"
  ME_Manchu_Events.44.d: "Envoys from [qng_big_tribute_target.GetName] have arrived in [Root.Capital.GetName] bearing their annual tribute. They have arrived with a full escort of royal servants and and all number of extravagant decorations. The court servants do their duties diligently and greet them in kind, but ministers - especially those well aware of the finances - may have something to say of this."
  ME_Manchu_Events.44.a: "It's clear they've made an effort to come here, we should return the favor."
- ME_Manchu_Events.44.tb: "The pageantry is apprecaited, but it was their choice."
+ ME_Manchu_Events.44.b: "The pageantry is apprecaited, but it was their choice."
+ #theologian
+ ME_Manchu_Events.45.t: "Huang Zongxi"
+ ME_Manchu_Events.45.d: "Huang Zongxi was born under the rule of the Ming, and so developed his philosophies on Ming-Era Neo-Confucian teachings. His greatest work 'Mingyi Daifang Lu' is quite clearly a targeted attack on our new regime; the work accuses and implicates the Manchu rulers as partaking in selfish rule. His other works build on older theories, such as hypothesizing that the 'li', universal order, and 'qi', are inseperable concepts. Therefore, man, as a creation of 'li', as well as an independent being, leads to the conclusion that matter must be able to control itself, and therefore must be in possession of 'li', universal principe."
+ ME_Manchu_Events.45.a: "What a fascinating idea."
+ ME_Manchu_Events.45.b: "Did you say dissenter?"
+ #
+ ME_Manchu_Events.46.t: "Gu Yanwu"
+ ME_Manchu_Events.46.d: "Gu Yanwu was a prolific writer and thinker within the Ming-Era. Inspired by the weak and ineffective government of the Ming, he traced many of the systematic issues to Neo-Confucian philosophies invented during mid-Ming Era, and subsequently rejected them. He emphasized that true Confucian Scholars should learn the Classics, 'jingxue', and that reviving the studies of the Classics with modern methods would produce new and innovative exegesis. His works and criticisms inspired a great many other thinkers and opened the intellectual world's proverbial floodgates for new interpretations and discussion.\n\n All under Heaven, from one's one person to familiar and state affairs, can and must be based on studying and learning the Classical writings. And all social relationships and interactions are founded on the principle of self-restriction and modesty.\n~Analects"
+ ME_Manchu_Events.46.a: "We could do with new ideas like that."
  
 #modifiers
  MCH_unification_ambitions: "Unite the Tribes"
