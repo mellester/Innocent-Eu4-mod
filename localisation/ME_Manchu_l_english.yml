@@ -240,16 +240,40 @@ l_english:
  ME_Manchu_Events.44.t: "Great Envoys from [qng_big_tribute_target.GetName]"
  ME_Manchu_Events.44.d: "Envoys from [qng_big_tribute_target.GetName] have arrived in [Root.Capital.GetName] bearing their annual tribute. They have arrived with a full escort of royal servants and and all number of extravagant decorations. The court servants do their duties diligently and greet them in kind, but ministers - especially those well aware of the finances - may have something to say of this."
  ME_Manchu_Events.44.a: "It's clear they've made an effort to come here, we should return the favor."
- ME_Manchu_Events.44.b: "The pageantry is apprecaited, but it was their choice."
- #theologian
- ME_Manchu_Events.45.t: "Huang Zongxi"
+ ME_Manchu_Events.44.b: "The pageantry is appreciated, but it was their choice."
+ 
+ ME_Manchu_Events.45.t: "Huang Zongxi, Neo-Confucian Philosopher"
  ME_Manchu_Events.45.d: "Huang Zongxi was born under the rule of the Ming, and so developed his philosophies on Ming-Era Neo-Confucian teachings. His greatest work 'Mingyi Daifang Lu' is quite clearly a targeted attack on our new regime; the work accuses and implicates the Manchu rulers as partaking in selfish rule. His other works build on older theories, such as hypothesizing that the 'li', universal order, and 'qi', are inseperable concepts. Therefore, man, as a creation of 'li', as well as an independent being, leads to the conclusion that matter must be able to control itself, and therefore must be in possession of 'li', universal principe."
  ME_Manchu_Events.45.a: "What a fascinating idea."
  ME_Manchu_Events.45.b: "Did you say dissenter?"
- #
- ME_Manchu_Events.46.t: "Gu Yanwu"
+
+ ME_Manchu_Events.46.t: "Gu Yanwu, Philosopher of the Classics"
  ME_Manchu_Events.46.d: "Gu Yanwu was a prolific writer and thinker within the Ming-Era. Inspired by the weak and ineffective government of the Ming, he traced many of the systematic issues to Neo-Confucian philosophies invented during mid-Ming Era, and subsequently rejected them. He emphasized that true Confucian Scholars should learn the Classics, 'jingxue', and that reviving the studies of the Classics with modern methods would produce new and innovative exegesis. His works and criticisms inspired a great many other thinkers and opened the intellectual world's proverbial floodgates for new interpretations and discussion.\n\n All under Heaven, from one's one person to familiar and state affairs, can and must be based on studying and learning the Classical writings. And all social relationships and interactions are founded on the principle of self-restriction and modesty.\n~Analects"
  ME_Manchu_Events.46.a: "We could do with new ideas like that."
+ 
+ ME_Manchu_Events.47.t: "Wang Fuzhi, The First Materialist"
+ ME_Manchu_Events.47.d: "Unlike his contemporaries, Wang Fuzhi utterly rejected and systematically undermined each aspect of Neo-Confucian philosophy. He argued that Reality is what is visible and hearable, and that they dominate the Heavenly Way. He also proposed that all material things are subject to Perpetual Flux, a concept which extends to human Character; this is in contrast with the traditional Confucian view that humanity is naturally Good - as Fuzhi's philosophy implies that that is not set in stone. Beyond this, Fuzhi preached utilitarianism with respect to the Confucian understanding of Knowledge - arguing that knowledge without action is useless, and that action is of greater importance."
+ ME_Manchu_Events.47.a: "I'd like to hear more..."
+ ME_Manchu_Events.47.b: "How... disharmonius."
+ 
+ ME_Manchu_Events.48.t: "The Three Great Early Qing Philosophers"
+ ME_Manchu_Events.48.d: "Li Yong, Sun Qifeng, and Huang Zongxi are together known as the Three Great Early Qing Philosophers. While they approached the subject with different theories, they came to have a great impact on the future of Confucian philosophy and its discourse within the Qing Empire. Li Yong, saw Confucian writings as handbooks and guidelines for policy making. Sun Qifeng is regarded as one of the masters of Confucian Ethics, and and his work on 'Four Books' was recommened by disciples well into the Nineteenth Century. Huang Zongxi was one of the first Neo-Confucian scholars to stress the need for constitutional law in the empire, the need to be able to criticize the Emperor, and that the Emperor should respect the concerns of his subordinates."
+ ME_Manchu_Events.48.a: "Handbooks, eh?"
+ ME_Manchu_Events.48.b: "What advancements in ethics have been made?"
+ ME_Manchu_Events.48.c: "Tell me about this 'constitutional law'."
+ 
+ ME_Manchu_Events.49.t: "Yan Yuan and Li Gong, Critics of Impracticality"
+ ME_Manchu_Events.49.d: "Yan Yuan and his disciple Li Gong, were outspoken critics of the Song-to-Ming Era of Neo-Confucian philosophy. They criticized past philosophies for being useless and unusable in real life and government - that scholars of Neo-Confucian philosophies were too stuck in their books and studies to contribute to political an militaristic affairs. They wanted the state to focus on building great projects, rearing great generals, and employing by great merit, rather than judging character value on scholarly pursuits."
+ ME_Manchu_Events.49.a: "Hire the elder, I would like to know more."
+ ME_Manchu_Events.49.b: "Hire the younger, I would like to know more."
+  
+ ME_Manchu_Events.50.: "Hui Dong, Scholar of the Han Classics"
+ ME_Manchu_Events.50.: "Hui Dong and his father, and his father's father, spent many years reinterpreting the Confucian Classics. They considered Classics from the even the Song and Tang eras too far removed from Confucius' original teachings. Hui Dong thought the truth could only be discerned by reading the then-newest commentaries of Confucian writings. He thought that Han-Era writers were recent enough that they still had knowledge of the original meanings of the Classics."
+ ME_Manchu_Events.50.: "What can we learn from our ancestors?"
+ 
+ ME_Manchu_Events.51.t: "Dai Zhen, Confucian Fundamentalist"
+ ME_Manchu_Events.51.d: "Dai Zhen sought to reach the core philosophies of Confucius. He actively attempted to separate Daoist and Bhuddhist influences from the core Confucian beliefs, even going so far as to claim that Han-Era writings on Confucianism were already too far removed from Confucius himself. One of his major focuses was the emphasis on Human Affects, which says that desires are part of human nature, opposing the traditional Neo-Confucian interpretation that Human Desire is opposite to Heavenly Order."
+ ME_Manchu_Events.51.a: "Finally someone who appreciates the Classic Classic Classics."
  
 #modifiers
  MCH_unification_ambitions: "Unite the Tribes"
