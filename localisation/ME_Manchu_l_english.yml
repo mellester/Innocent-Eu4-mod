@@ -243,13 +243,14 @@ l_english:
  ME_Manchu_Events.44.b: "The pageantry is appreciated, but it was their choice."
  
  ME_Manchu_Events.45.t: "Huang Zongxi, Neo-Confucian Philosopher"
- ME_Manchu_Events.45.d: "Huang Zongxi was born under the rule of the Ming, and so developed his philosophies on Ming-Era Neo-Confucian teachings. His greatest work 'Mingyi Daifang Lu' is quite clearly a targeted attack on our new regime; the work accuses and implicates the Manchu rulers as partaking in selfish rule. His other works build on older theories, such as hypothesizing that the 'li', universal order, and 'qi', are inseperable concepts. Therefore, man, as a creation of 'li', as well as an independent being, leads to the conclusion that matter must be able to control itself, and therefore must be in possession of 'li', universal principe."
+ ME_Manchu_Events.45.d: "Huang Zongxi was born under the rule of the Ming, and so developed his philosophies on Ming-Era Neo-Confucian teachings. His greatest work 'Mingyi Daifang Lu' is quite clearly a targeted attack on our new regime; the work accuses and implicates the Manchu rulers as partaking in selfish rule. His other works build on older theories, such as hypothesizing that the 'li', Universal Order, and 'qi', are inseperable concepts. Therefore, Man, as a creation of 'li', and as an independent Being, leads to the conclusion that Matter must be able to control itself, and therefore must be in possession of 'li', Universal Principle."
  ME_Manchu_Events.45.a: "What a fascinating idea."
  ME_Manchu_Events.45.b: "Did you say dissenter?"
 
  ME_Manchu_Events.46.t: "Gu Yanwu, Philosopher of the Classics"
  ME_Manchu_Events.46.d: "Gu Yanwu was a prolific writer and thinker within the Ming-Era. Inspired by the weak and ineffective government of the Ming, he traced many of the systematic issues to Neo-Confucian philosophies invented during mid-Ming Era, and subsequently rejected them. He emphasized that true Confucian Scholars should learn the Classics, 'jingxue', and that reviving the studies of the Classics with modern methods would produce new and innovative exegesis. His works and criticisms inspired a great many other thinkers and opened the intellectual world's proverbial floodgates for new interpretations and discussion.\n\n All under Heaven, from one's one person to familiar and state affairs, can and must be based on studying and learning the Classical writings. And all social relationships and interactions are founded on the principle of self-restriction and modesty.\n~Analects"
  ME_Manchu_Events.46.a: "We could do with new ideas like that."
+ ME_Manchu_Events.46.b: "This man seems to have no interest in serving the court."
  
  ME_Manchu_Events.47.t: "Wang Fuzhi, The First Materialist"
  ME_Manchu_Events.47.d: "Unlike his contemporaries, Wang Fuzhi utterly rejected and systematically undermined each aspect of Neo-Confucian philosophy. He argued that Reality is what is visible and hearable, and that they dominate the Heavenly Way. He also proposed that all material things are subject to Perpetual Flux, a concept which extends to human Character; this is in contrast with the traditional Confucian view that humanity is naturally Good - as Fuzhi's philosophy implies that that is not set in stone. Beyond this, Fuzhi preached utilitarianism with respect to the Confucian understanding of Knowledge - arguing that knowledge without action is useless, and that action is of greater importance."
@@ -257,23 +258,83 @@ l_english:
  ME_Manchu_Events.47.b: "How... disharmonius."
  
  ME_Manchu_Events.48.t: "The Three Great Early Qing Philosophers"
- ME_Manchu_Events.48.d: "Li Yong, Sun Qifeng, and Huang Zongxi are together known as the Three Great Early Qing Philosophers. While they approached the subject with different theories, they came to have a great impact on the future of Confucian philosophy and its discourse within the Qing Empire. Li Yong, saw Confucian writings as handbooks and guidelines for policy making. Sun Qifeng is regarded as one of the masters of Confucian Ethics, and and his work on 'Four Books' was recommened by disciples well into the Nineteenth Century. Huang Zongxi was one of the first Neo-Confucian scholars to stress the need for constitutional law in the empire, the need to be able to criticize the Emperor, and that the Emperor should respect the concerns of his subordinates."
+ ME_Manchu_Events.48.d: "Li Yong, Sun Qifeng, and Huang Zongxi are together known as the Three Great Early Qing Philosophers. While they approach the subject with different theories, it seems they will have a great impact on the future of Confucian philosophy and its discourse within the Qing Empire. Li Yong, sees Confucian writings as handbooks and guidelines for policy making. Sun Qifeng is regarded as one of the masters of Confucian Ethics, and and his work on 'Four Books' is recommend by disciples, and likely will be well into the future. Huang Zongxi was one of the first Neo-Confucian scholars to stress the need for constitutional law in the empire, the need to be able to criticize the Emperor, and that the Emperor should respect the concerns of his subordinates."
  ME_Manchu_Events.48.a: "Handbooks, eh?"
  ME_Manchu_Events.48.b: "What advancements in ethics have been made?"
  ME_Manchu_Events.48.c: "Tell me about this 'constitutional law'."
  
  ME_Manchu_Events.49.t: "Yan Yuan and Li Gong, Critics of Impracticality"
- ME_Manchu_Events.49.d: "Yan Yuan and his disciple Li Gong, were outspoken critics of the Song-to-Ming Era of Neo-Confucian philosophy. They criticized past philosophies for being useless and unusable in real life and government - that scholars of Neo-Confucian philosophies were too stuck in their books and studies to contribute to political an militaristic affairs. They wanted the state to focus on building great projects, rearing great generals, and employing by great merit, rather than judging character value on scholarly pursuits."
+ ME_Manchu_Events.49.d: "Yan Yuan and his disciple Li Gong, are outspoken critics of the Song-to-Ming Era of Neo-Confucian philosophy. They criticize past philosophies for being useless and unusable in real life and government - that scholars of Neo-Confucian philosophies were too stuck in their books and studies to contribute to political an militaristic affairs. They want the state to focus on building great projects, rearing great generals, and employing by great merit, rather than judging character value on scholarly pursuits."
  ME_Manchu_Events.49.a: "Hire the elder, I would like to know more."
  ME_Manchu_Events.49.b: "Hire the younger, I would like to know more."
   
- ME_Manchu_Events.50.: "Hui Dong, Scholar of the Han Classics"
- ME_Manchu_Events.50.: "Hui Dong and his father, and his father's father, spent many years reinterpreting the Confucian Classics. They considered Classics from the even the Song and Tang eras too far removed from Confucius' original teachings. Hui Dong thought the truth could only be discerned by reading the then-newest commentaries of Confucian writings. He thought that Han-Era writers were recent enough that they still had knowledge of the original meanings of the Classics."
- ME_Manchu_Events.50.: "What can we learn from our ancestors?"
+ ME_Manchu_Events.50.t: "Hui Dong, Scholar of the Han Classics"
+ ME_Manchu_Events.50.d: "Hui Dong and his father, and his father's father, have spent many years reinterpreting the Confucian Classics. They consider Classics from the even the Song and Tang eras too far removed from Confucius' original teachings. Hui Dong thinks the truth could only be discerned by reading the then-newest commentaries of Confucian writings. He believes that Han-Era writers were recent enough that they still had knowledge of the original meanings of the Classics."
+ ME_Manchu_Events.50.a: "What can we learn from our ancestors?"
  
  ME_Manchu_Events.51.t: "Dai Zhen, Confucian Fundamentalist"
- ME_Manchu_Events.51.d: "Dai Zhen sought to reach the core philosophies of Confucius. He actively attempted to separate Daoist and Bhuddhist influences from the core Confucian beliefs, even going so far as to claim that Han-Era writings on Confucianism were already too far removed from Confucius himself. One of his major focuses was the emphasis on Human Affects, which says that desires are part of human nature, opposing the traditional Neo-Confucian interpretation that Human Desire is opposite to Heavenly Order."
+ ME_Manchu_Events.51.d: "Dai Zhen seeks to reach the core philosophies of Confucius. He actively attempts to separate Daoist and Bhuddhist influences from the core Confucian beliefs, even going so far as to claim that Han-Era writings on Confucianism were already too far removed from Confucius himself. One of his major focuses is the emphasis on Human Affects, which says that desires are part of human nature, opposing the traditional Neo-Confucian interpretation that Human Desire is opposite to Heavenly Order."
  ME_Manchu_Events.51.a: "Finally someone who appreciates the Classic Classic Classics."
+ 
+ ME_Manchu_Events.52.t: "Bada Shanren, Prodigy Painter"
+ ME_Manchu_Events.52.d: "Born as a Ming Prince, Zhu Da, Bada Shanren had to seek refuge when Qing armies invaded. He was unsure of his position in society in the shifting regime, and so waited out the storm in a monastery. Strangely, after leaving the monastery it is reported that he acted strangely and with much eccentricity; many have attributed this acting-out to a mental break from the stress of losing his family. His works in painting exhibit a wet and subdued style which captured the being of plants and animals perfectly, while his landscapes feature short, sharp brush strokes which render the land unlike any of his contemporaries."
+ ME_Manchu_Events.52.a: "A misunderstood genius..."
+ 
+ ME_Manchu_Events.53.t: "Jiang Tingxi, Encyclopedian"
+ ME_Manchu_Events.53.d: "As an official painter of the Qing Court, Jiang Tinxi has become adept in a number of artistic styles, though he specializes in painting birds, flowers, and calligraphic arts. In our efforts to document and compile the known knowledge of the Qing Dynasty, the Emperor has commissioned a great work,'Complete Collection of Illustrations and Writings from the Earliest to Current Times.' Such a work will require many, many illustrations and Jiang Tingxi seems very fit for the job."
+ ME_Manchu_Events.53.a: "Well, he is already on the payroll."
+ 
+ ME_Manchu_Events.54.t: "Shi Tao, Individualist Painter"
+ ME_Manchu_Events.54.d: "The works of Shi Tao have been making waves amongst artists. He leads a movement known as Individualism - a movement which forgoes rigidly codified artistic techniques. His works themselves contained bold, impressionistic, brush strokes and an interest in subjective perspective. The accompanying poetry and calligraphy are similarly irreverent and artful."
+ ME_Manchu_Events.54.a: "This new style is fantastic."
+ ME_Manchu_Events.54.b: "I'm not quite a fan."
+ 
+ ME_Manchu_Events.55.t: "Fuqing, Resident to Tibet"
+ ME_Manchu_Events.55.d: "As a former general of the Qing army, Fuqing had recieved much experience in leadership. It was for this reason that he appeared to the Emperor as someone fit to keep the peace in the tumultuous region of Tibet."
+ ME_Manchu_Events.55.a: "He seems quite competent."
+ ME_Manchu_Events.55.a: "Probably best to keep generals as generals."
+ 
+ ME_Manchu_Events.56.t: "Huang Shujing, First Imperial High Commissioner to Taiwan"
+ ME_Manchu_Events.56.d: "Huang Shujing was a native to Beijing, sent to Taiwan by the Emperor to oversea its administration. He recorded the findings in 'Records from the Mission to Taiwan and its Strait.' Perhaps we should recall him, and have him serve the emperor closer to home, where his newfound experience can be utilized?"
+ ME_Manchu_Events.56.a: "Yes, it would be a good idea."
+ ME_Manchu_Events.56.b: "He already seems quite competent in Taiwan."
+ 
+ ME_Manchu_Events.57.t: "Keying, Negotiator to the West"
+ ME_Manchu_Events.57.d: "Keying was a Manchu bannerman, born to the House of Aisin Giroro, and of the Plan Blue Banner. He served as a statesman with high competency, before being evicted from his position due to corruption."
+ ME_Manchu_Events.57.a: "We could use his skills again in the Court. Find him!"
+ ME_Manchu_Events.57.a: "Put his skills to use as a diplomat instead."
+ 
+ ME_Manchu_Events.58.t: "Songgotu, Minister and Duke"
+ ME_Manchu_Events.58.d: "During the rising of the Emperor [Root.Monarch.GetName], Songgotu helped the young Emperor depose the regent. His loyalty and skills allowed him to rise through the ranks, gaining many prominent positions. His position as one of the most influential statesmen of the Imperial Court was exhibited when he acted as diplomat to Russia and signed the Treaty of Nerchinsk."
+ ME_Manchu_Events.58.a: "Continue serving at the Emperor's Side."
+ ME_Manchu_Events.58.b: "Have him negotiate with other foreign powers."
+ 
+ ME_Manchu_Events.59.t: "Tulisen, Embassy to the Kalmyks"
+ ME_Manchu_Events.59.d: "Originally a mid-level statesman in the Qing Bureaucracy, Tulisen made himself known to the greater world after he was appointed by the Qing embassy to the Kalmyk Khan. His journeys through Siberia and the Russian Empire captured the interest of both China and Western Powers. After the publishing of his travelouge, he returned to Beijing where he headed more negotiations with Russia. "
+ ME_Manchu_Events.59.a: "It's time for him to serve in China."
+ ME_Manchu_Events.59.b: "His diplomatic missions are fascinating."
+ 
+ ME_Manchu_Events.60.t: "Yang Fang, Writer and General"
+ ME_Manchu_Events.60.d: "A Chinese general who trained in military school at the recommendation of Yang Yuchun, Yang Fang gained recognition in suppressing revolts; his exploits reached past the Chinese homeland, when he continued to maintain order in Xinjiang. He later served as a diplomat to contravening Western powers, taking a hardline stance against their meddling."
+ ME_Manchu_Events.60.a: "I like a diplomat who can stand his ground!"
+ ME_Manchu_Events.60.b: "Perhaps he should stay a man of the army."
+ ME_Manchu_Events.60.c: "Have him lead the military bureaucracy."
+ 
+ ME_Manchu_Events.61.t: "Thomas Pereira"
+ ME_Manchu_Events.61.d: ""
+ ME_Manchu_Events.61.a: ""
+
+ ME_Manchu_Events.62.t: "Johann Schreck"
+ ME_Manchu_Events.62.d: ""
+ ME_Manchu_Events.62.a: ""
+ 
+ ME_Manchu_Events.62.t: "Minggatu"
+ ME_Manchu_Events.62.d: ""
+ ME_Manchu_Events.62.a: ""
+ 
+ ME_Manchu_Events.62.t: "Ye Tianshi"
+ ME_Manchu_Events.62.d: ""
+ ME_Manchu_Events.62.a: ""
  
 #modifiers
  MCH_unification_ambitions: "Unite the Tribes"
@@ -491,6 +552,12 @@ l_english:
 
  QNG_generous_host: "Generous Host"
  desc_QNG_generous_host: "This guy hosts some great parties."
+ 
+ QNG_materialist: "Materialist"
+ desc_QNG_materialist: "This is almost heresy, or something."
+ 
+ QNG_neo_confucian: "Neo-Confucian Fundamentalist"
+ desc_QNG_neo_confucian: "Read the Classics!"
  
  #decisions
  QNG_great_clearance_title: "The Great Clearance"

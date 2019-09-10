@@ -2755,3 +2755,885 @@ country_event = { #envoy event 1 (enabled by .24)
 		}
 	}
 }
+
+country_event = { #Huang Zongxi, Neo-Confucian Philosopher
+	id = ME_Manchu_Events.45
+	title = ME_Manchu_Events.45.t
+	desc = ME_Manchu_Events.45.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1610
+		NOT = { is_year = 1695 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #take
+		name = ME_Manchu_Events.45.a
+		define_advisor = {
+			type = philosopher
+			name = "Huang Zongxi"
+			skill = 3
+			culture = wu
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #no take
+		name = ME_Manchu_Events.45.b
+		add_mil_power = 15
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+}
+
+country_event = { #Gu Yanwu
+	id = ME_Manchu_Events.46
+	title = ME_Manchu_Events.46.t
+	desc = ME_Manchu_Events.46.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1610
+		NOT = { is_year = 1695 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #take
+		name = ME_Manchu_Events.46.a
+		define_advisor = {
+			type = philosopher
+			name = "Gu Yanwu"
+			skill = 3
+			culture = wu
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #no take
+		name = ME_Manchu_Events.46.b
+		add_prestige = -5
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+}
+
+country_event = { #Wang Fuzhi
+	id = ME_Manchu_Events.47
+	title = ME_Manchu_Events.47.t
+	desc = ME_Manchu_Events.47.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1620
+		NOT = { is_year = 1695 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.47.a
+		define_advisor = {
+			type = philosopher
+			name = "Wang Fuzhi"
+			skill = 3
+			culture = xiang
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+		add_ruler_modifier = {
+			name = QNG_materialist
+			duration = -1
+		}
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.47.b
+		add_ruler_modifier = {
+			name = QNG_neo_confucian
+			duration = -1
+		}
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+}
+
+country_event = { #3 great early qing philos
+	id = ME_Manchu_Events.48
+	title = ME_Manchu_Events.48.t
+	desc = ME_Manchu_Events.48.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1580
+		NOT = { is_year = 1710 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.48.a
+		trigger = {
+			is_year = 1630
+			NOT = { is_year = 1710 }
+		}
+		define_advisor = {
+			type = philosopher
+			name = "Li Yong"
+			skill = 3
+			culture = xibei
+			religion = confucianism
+			cost_multiplier = 0.90
+		}
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.48.b
+		trigger = {
+			is_year = 1580
+			NOT = { is_year = 1680 }
+		}
+		define_advisor = {
+			type = philosopher
+			name = "Sun Qifeng"
+			skill = 3
+			culture = chihan
+			religion = confucianism
+			cost_multiplier = 0.90
+		}
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.48.c
+		trigger = {
+			is_year = 1610
+			NOT = { is_year = 1700 }
+		}
+		define_advisor = {
+			type = philosopher
+			name = "Huang Zongxi"
+			skill = 3
+			culture = wu
+			religion = confucianism
+			cost_multiplier = 0.90
+		}
+		hidden_effect = {
+			set_country_flag = qng_ranked_lists_flag
+		}
+	}
+}
+
+country_event = { #yan yuan and li gong
+	id = ME_Manchu_Events.49
+	title = ME_Manchu_Events.49.t
+	desc = ME_Manchu_Events.49.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1630
+		NOT = { is_year = 1730 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #yy
+		name = ME_Manchu_Events.49.a
+		trigger = {
+			is_year = 1635
+			NOT = { is_year = 1705 }
+		}
+		define_advisor = {
+			type = philosopher
+			name = "Yan Yuan"
+			skill = 3
+			culture = chihan
+			religion = confucianism
+			cost_multiplier = 0.80
+		}
+	}
+	
+	option = { #lg
+		name = ME_Manchu_Events.49.a
+		trigger = {
+			is_year = 1660
+			NOT = { is_year = 1730 }
+		}
+		define_advisor = {
+			type = philosopher
+			name = "Li Gong"
+			skill = 3
+			culture = chihan
+			religion = confucianism
+			cost_multiplier = 0.80
+		}
+	}
+}
+
+country_event = { #Hui Dong
+	id = ME_Manchu_Events.50
+	title = ME_Manchu_Events.50.t
+	desc = ME_Manchu_Events.50.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1700
+		NOT = { is_year = 1760 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.50.a
+		define_advisor = {
+			type = philosopher
+			name = "Hui Dong"
+			skill = 3
+			culture = wu
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+}
+
+country_event = { #Dai Zhen
+	id = ME_Manchu_Events.51
+	title = ME_Manchu_Events.51.t
+	desc = ME_Manchu_Events.51.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1725
+		NOT = { is_year = 1780 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #
+		name = ME_Manchu_Events.51.a
+		define_advisor = {
+			type = philosopher
+			name = "Dai Zhen"
+			skill = 3
+			culture = jianghuai
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+}
+
+country_event = { #bada shanren
+	id = ME_Manchu_Events.52
+	title = ME_Manchu_Events.52.t
+	desc = ME_Manchu_Events.52.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1630
+		NOT = { is_year = 1710 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.52.a
+		define_advisor = {
+			type = artist
+			name = "Bada Shanren"
+			skill = 5
+			culture = chihan
+			religion = confucianism
+			cost_multiplier = 0.75
+		}
+	}
+}
+
+country_event = { #jiang tinxi
+	id = ME_Manchu_Events.53
+	title = ME_Manchu_Events.53.t
+	desc = ME_Manchu_Events.53.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1670
+		NOT = { is_year = 1735 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.52.a
+		define_advisor = {
+			type = artist
+			name = "Jiang Tingxi"
+			skill = 3
+			culture = jianghuai
+			religion = confucianism
+			cost_multiplier = 0.95
+		}
+	}
+}
+
+country_event = { #shi tao
+	id = ME_Manchu_Events.54
+	title = ME_Manchu_Events.54.t
+	desc = ME_Manchu_Events.54.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1640
+		NOT = { is_year = 1710 }
+		NOT = { has_adm_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = {
+		name = ME_Manchu_Events.54.a
+		
+		define_advisor = {
+			type = artist
+			name = "Shi Tao"
+			skill = 3
+			culture = zhuang
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+		add_prestige = -10
+	}
+	
+	option = {
+		name = ME_Manchu_Events.54.b
+	}
+}
+
+country_event = { #Fuqing
+	id = ME_Manchu_Events.55
+	title = ME_Manchu_Events.55.t
+	desc = ME_Manchu_Events.55.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1690
+		NOT = { is_year = 1750 }
+		NOT = { has_dip_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #staesman
+		name = ME_Manchu_Events.55.a
+		
+		define_advisor = {
+			type = statesman
+			name = "Fuqing"
+			skill = 2
+			culture = manchu
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+	
+	option = { #general
+		name = ME_Manchu_Events.55.b
+		
+		define_general = {
+			name = "Fuqing"
+			shock = 3
+			fire = 3
+			manuever = 0
+			siege = 0
+		}
+	}
+}
+
+country_event = { #huang shujing
+	id = ME_Manchu_Events.56
+	title = ME_Manchu_Events.56.t
+	desc = ME_Manchu_Events.56.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1680
+		NOT = { is_year = 1725 }
+		NOT = { has_dip_advisor = yes }
+		taiwan_area = {
+			type = all
+			owned_by = ROOT
+		}
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #staesman
+		name = ME_Manchu_Events.56.a
+		
+		define_advisor = {
+			type = statesman
+			name = "Huang Shujing"
+			skill = 3
+			culture = chihan
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+	
+	option = { #staesman
+		name = ME_Manchu_Events.56.b
+		
+		taiwan_area = {
+			add_base_tax = 1
+		}
+	}
+}
+
+country_event = { #Keying
+	id = ME_Manchu_Events.57
+	title = ME_Manchu_Events.57.t
+	desc = ME_Manchu_Events.57.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1780
+		NOT = { is_year = 1860 }
+		NOT = { has_dip_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #statesman
+		name = ME_Manchu_Events.57.a
+		
+		define_advisor = {
+			type = statesman
+			name = "Keying"
+			skill = 3
+			culture = manchu
+			religion = confucianism
+			cost_multiplier = 0.90
+		}
+	}
+	
+	option = { #statesman
+		name = ME_Manchu_Events.57.a
+		
+		define_advisor = {
+			type = diplomat
+			name = "Keying"
+			skill = 3
+			culture = manchu
+			religion = confucianism
+			cost_multiplier = 0.70
+		}
+	}
+}
+
+country_event = { #Songgotu
+	id = ME_Manchu_Events.58
+	title = ME_Manchu_Events.58.t
+	desc = ME_Manchu_Events.58.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		mission_completed = QNG_russia
+		is_year = 1640
+		NOT = { is_year = 1700 }
+		NOT = { has_dip_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #statesman
+		name = ME_Manchu_Events.58.a
+		
+		define_advisor = {
+			type = statesman
+			name = "Keying"
+			skill = 5
+			culture = manchu
+			religion = confucianism
+			cost_multiplier = 0.75
+		}
+	}
+	
+	option = { #diplomat
+		name = ME_Manchu_Events.58.b
+		
+		define_advisor = {
+			type = diplomat
+			name = "Keying"
+			skill = 3
+			culture = manchu
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+}
+
+country_event = { #tulisen
+	id = ME_Manchu_Events.59
+	title = ME_Manchu_Events.59.t
+	desc = ME_Manchu_Events.59.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		mission_completed = QNG_russia
+		is_year = 1670
+		NOT = { is_year = 1740 }
+		NOT = { has_dip_advisor = yes }
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #statesman
+		name = ME_Manchu_Events.59.a
+		
+		define_advisor = {
+			type = statesman
+			name = "Tulisen"
+			skill = 3
+			culture = manchu
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+	
+	option = { #diplomat
+		name = ME_Manchu_Events.59.b
+		
+		define_advisor = {
+			type = diplomat
+			name = "Tulisen"
+			skill = 3
+			culture = manchu
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+}
+
+country_event = { #Yang Fang
+	id = ME_Manchu_Events.60
+	title = ME_Manchu_Events.60.t
+	desc = ME_Manchu_Events.60.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		mission_completed = QNG_advisors
+		is_year = 1770
+		NOT = { is_year = 1850 }
+		OR = {
+			NOT = { has_dip_advisor = yes }
+			NOT = { has_mil_advisor = yes }
+		}
+		had_country_flag = {
+			flag = qng_ranked_lists_flag
+			days = 2190
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = qng_ranked_lists_flag
+		}
+	}
+	
+	option = { #diplomat
+		name = ME_Manchu_Events.60.a
+		
+		define_advisor = {
+			type = diplomat
+			name = "Yang Fang"
+			skill = 3
+			culture = miao
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+	
+	option = { #diplomat
+		name = ME_Manchu_Events.60.b
+		
+		define_general = {
+			name = "Fuqing"
+			shock = 2
+			fire = 4
+			manuever = 1
+			siege = 0
+		}
+	}
+	
+	option = { #diplomat
+		name = ME_Manchu_Events.60.b
+		
+		define_advisor = {
+			type = army_organiser
+			name = "Tulisen"
+			skill = 3
+			culture = miao
+			religion = confucianism
+			cost_multiplier = 0.85
+		}
+	}
+}

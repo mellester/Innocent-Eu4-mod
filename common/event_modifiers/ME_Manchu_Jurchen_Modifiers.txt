@@ -427,3 +427,11 @@ QNG_generous_host = {
 QNG_less_tributes = {
 	global_tax_modifier = 0.05
 }
+
+QNG_neo_confucian = {
+	tolerance_own = 1
+}
+
+QNG_materialist = {
+	tolerance_own = -1
+}
