@@ -188,3 +188,9 @@ mongolia_our_heathen_subjects = {
 kha_broke_the_shackles = {
 	province_warscore_cost = -0.1
 }
+kha_peace_between_the_clans = {
+	global_autonomy = -0.1
+}
+kha_mongol_unity = {
+	global_unrest = -2
+}

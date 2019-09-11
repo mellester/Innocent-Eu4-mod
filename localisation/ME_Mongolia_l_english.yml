@@ -44,12 +44,22 @@
  kha_unite_tengri_desc: "Beneath the infinite sky, known by many as Tengri, lies those who worship the blue expanse that provides all life in this world. We must unite the people who see this light for what it truly is."
  kha_return_of_the_golden_horde_title: "Return of the Golden Horde"
  kha_return_of_the_golden_horde_desc: "With grand ambitions come hurdles that must be leaped over, and milestones to guide the way. Out of the four Khanates that emerged from the Mongol Empire, the Great Horde kept our lifestyle in mind and continued our ancient traditions of pastoralism. We would do well to realize their glory before our own."
-
+ kha_khalkha_acceptance_title: "Khalkha Acceptance"
+ kha_khalkha_acceptance_desc: ""
+ kha_foreign_khalkhas_title: "Turning the Tables"
+ kha_foreign_khalkhas_desc: ""
+ kha_conquer_oirats_title: "Oirats"
+ kha_conquer_oirats_desc: ""
+ kha_mongoli_unity_title: "Mongoli Unity"
+ kha_mongoli_unity_desc: ""
+ kha_integrating_the_mongols_title: "Integrating the Mongols"
+ kha_integrating_the_mongols_desc: ""
+ kha_regain_prestige_title: "Regain Prestige"
+ kha_regain_prestige_desc: "
  KHA_SECONDARY_RELIGION_BONUSES_TT: "If §YSunni§! is our syncretic faith, all §YSunni§! provinces owned by us receive §G-3§! unrest."
  KHA_SECONDARY_RELIGION_BONUSES_TT_NO_DLC: "All §YSunni§! provinces owned by us receive §G-3§! unrest."
  KHA_CAN_FORM_GOLDEN_HORDE_WITH_ALTAIC_CULTURE: "We will be able to form @GLH §Y[GLH.GetName]§!, if we are in the §YAltaic§! culture group."
- KHA_CHACHAR_PROVINCES_LOSE_NATIONALISM: "All provinces of the §YChachar§! culture gain §G-15§! years of nationalism."
- 
+
  # Modifiers:
  mongolia_independence: "Desire for Independence"
  mongolia_desire: "Great Fervor"
@@ -92,6 +102,8 @@
  mongolia_our_muslim_subjects: "Our Muslim Subjects"
  mongolia_our_heathen_subjects: "Our Heathen Subjects"
  kha_broke_the_shackles: "Broke the Shackles"
+ kha_peace_between_the_clans: "Peace between the Clans"
+ kha_mongol_unity: "Mongol Peace"
  
  # Opinion Modifiers:
  mongolia_opinion_lost_mandate: "Lost the Mandate"
@@ -161,5 +173,30 @@
  ME_Mongolia_Events13.EVTOPT1: "Accept Islam as a minority religion again."
  ME_Mongolia_Events13.EVTOPT2: "Religion is a secondary matter."
  
+ ME_Mongolia_Events.EVTNAME14: "Consolidation of Mongols"
+ ME_Mongolia_Events.EVTDESC14: "The local culture of x has become closer to the main culture of the state which brings them closer :)"
+ ME_Mongolia_Events14.EVTOPT1: "YEAH!"
+ 
+ ME_Mongolia_Events.EVTNAME15: "Raid Into China"
+ ME_Mongolia_Events.EVTDESC15: "Swiggity Swooty, Mongols are coming for your booty!"
+ ME_Mongolia_Events15.EVTOPT1: "Ye, sure, lets do that"
+ ME_Mongolia_Events15.EVTOPT2: "We need the raiders elsewhere!"
+ 
+ ME_Mongolia_Events.EVTNAME16: "Mongol Raid"
+ ME_Mongolia_Events.EVTDESC16: "Swiggity Swooty, Mongols are coming for our booty!"
+ ME_Mongolia_Events16.EVTOPT1: "Give them their ancestral lands back in exchange for no raid"
+ ME_Mongolia_Events16.EVTOPT2: "Face them!"
+ 
  IN_THREE_YEARS: "In §Y3 years§!:"
+ ME_Mongolia_Events.1: "All provinces of the §YChachar§! culture gain §G-15§! years of separatism"
+ kha_tooltip.1: "§YKhalkha§! is an accepted culture"
+ kha_tooltip.2: "All provinces of §YKhalka§! and §YMongol§! culture lose §G-25.00%§! Local Autonomy"
+ kha_tooltip.3: "All [OIR.Adjective.GetName] cores of §YKhalkha§! culture are owned by §Y[Root.Country.GetName]§! or by its non-Tributary Subjects."
+ kha_tooltip.4: "Gain a permanent claim on all §YOirat§! culture provinces"
+ kha_tooltip.5: "All §YOirat§! culture provinces are owned by §Y[Root.Country.GetName]§! or by its non-Tributary Subjects."
+ kha_tooltip.6: "Gain a permanent claim on all §YUyghur§! culture provinces"
+ kha_tooltip.7: "All provinces of §YOirat§!,§YChachar§!,§YKhalkha§! and §YMongol§! cultures are owned by §Y[Root.Country.GetName]§!."
+ kha_tooltip.8: "All provinces of §YOirat§!,§YChachar§!,§YKhalkha§! and §YMongol§! cultures are owned by §Y[Root.Country.GetName]§!, have §Y0§! autonomy above minimum and §Y0§! separatism."
+ kha_tooltip.9: "Enables Event for the provinces of §YOirat§!,§YChachar§!,§YKhalkha§! and §YMongol§! cultures to convert to the main Mongol culture."
+ kha_tooltip.10: "If Ming wants to stop our raid, they will cede our ancestral lands back. However, if they don't do that, they will feel the fury of the Mongols once again."
  

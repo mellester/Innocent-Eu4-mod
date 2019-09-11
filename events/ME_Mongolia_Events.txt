@@ -915,3 +915,125 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = ME_Mongolia_Events.14
+	title = ME_Mongolia_Events.EVTNAME14
+	desc = ME_Mongolia_Events.EVTDESC14
+	picture = RELIGION_eventPicture
+	
+	trigger = {
+		has_country_flag = kha_conversion
+		any_owned_province = {
+			OR = {
+				culture = chahar 
+				culture = mongol
+				culture = oirats
+				culture = khalkha
+			}
+			NOT = {
+				culture = ROOT
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = ME_Mongolia_Events14.EVTOPT1
+		
+		ai_chance = { factor = 1 }
+		
+		random_owned_province = {
+			limit = {
+				OR = {
+					culture = chahar 
+					culture = mongol
+					culture = oirats
+					culture = khalkha
+				}
+				NOT = {
+					culture = ROOT
+				}
+			}
+			change_culture = ROOT
+		}
+	}
+	
+}
+country_event = {
+	id = ME_Mongolia_Events.15
+	title = ME_Mongolia_Events.EVTNAME15
+	desc = ME_Mongolia_Events.EVTDESC15
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = ME_Mongolia_Events15.EVTOPT1
+		
+		ai_chance = { factor = 1 }
+		MNG = {
+			country_event = { id = ME_Mongolia_Events.16 }
+		}
+		custom_tooltip = kha_tooltip.10
+		
+	}
+	option = {
+		name = ME_Mongolia_Events15.EVTOPT2
+		
+		ai_chance = { factor = 0 }
+		
+		add_yearly_manpower = 2
+	}
+	
+}
+country_event = {
+	id = ME_Mongolia_Events.16
+	title = ME_Mongolia_Events.EVTNAME16
+	desc = ME_Mongolia_Events.EVTDESC16
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = ME_Mongolia_Events16.EVTOPT1
+		
+		ai_chance = { factor = 1 }
+		702 = {
+			limit = {
+				owned_by = ROOT
+			}
+			cede_province = KHA
+		}
+		701 = {
+			limit = {
+				owned_by = ROOT
+			}
+			cede_province = KHA
+		}
+		4223 = {
+			limit = {
+				owned_by = ROOT
+			}
+			cede_province = KHA
+		}
+	}
+	option = {
+		name = ME_Mongolia_Events16.EVTOPT2
+		
+		ai_chance = { factor = 0 }
+		
+		add_yearly_manpower = -2
+	}
+	
+}
