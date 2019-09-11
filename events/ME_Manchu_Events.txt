@@ -3637,3 +3637,24 @@ country_event = { #Yang Fang
 		}
 	}
 }
+
+country_event = { #High Qing
+	id = ME_Manchu_Events.65
+	title = ME_Manchu_Events.65.t
+	desc = ME_Manchu_Events.65.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ME_Manchu_Events.65.a
+		
+		add_ruler_modifier = {
+			name = QNG_kangxi_emperor #-5% power costs
+			duration = -1
+		}
+		
+		custom_tooltip = qng_regnal_titles
+	}
+}

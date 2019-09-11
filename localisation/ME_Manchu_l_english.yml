@@ -328,13 +328,18 @@ l_english:
  ME_Manchu_Events.62.d: ""
  ME_Manchu_Events.62.a: ""
  
- ME_Manchu_Events.62.t: "Minggatu"
- ME_Manchu_Events.62.d: ""
- ME_Manchu_Events.62.a: ""
+ ME_Manchu_Events.63.t: "Minggatu"
+ ME_Manchu_Events.63.d: ""
+ ME_Manchu_Events.63.a: ""
  
- ME_Manchu_Events.62.t: "Ye Tianshi"
- ME_Manchu_Events.62.d: ""
- ME_Manchu_Events.62.a: ""
+ ME_Manchu_Events.64.t: "Ye Tianshi"
+ ME_Manchu_Events.64.d: ""
+ ME_Manchu_Events.64.a: ""
+ 
+ ME_Manchu_Events.65.t: "Beginning of the High Qing Era"
+ ME_Manchu_Events.65.d: "From the wild lands of Manchuria descended a great Khan who fought the armies of the Ming, captured city after city, and usurped the title of the Emperor of China and became the Son of Heaven. From him a great empire rose - the Empire of China of the Qing Dynasty.\nFinally, during the reign of [Root.Monarch.GetTitle] [Root.Monarch.GetName] is the former power and wealth of China restored. The steppe nomads have been pacified, the mountains of Tibet subjugated, the wastelands of Siberia secured, and all fronts have been brought to peace.\nInnovation and arts may now flourish, the people are now settling, and the granaries will overflow with bounty."
+ ME_Manchu_Events.65.a: "A new Era has arrived."
+ qng_regnal_titles: "From now on, new rulers may select an Era Name."
  
 #modifiers
  MCH_unification_ambitions: "Unite the Tribes"
@@ -558,6 +563,9 @@ l_english:
  
  QNG_neo_confucian: "Neo-Confucian Fundamentalist"
  desc_QNG_neo_confucian: "Read the Classics!"
+ 
+ QNG_kangxi_emperor: "The Kangxi Emperor"
+ desc_QNG_kangxi_emperor: "The GOAT."
  
  #decisions
  QNG_great_clearance_title: "The Great Clearance"
@@ -809,3 +817,6 @@ l_english:
  QNG_salt_monopoly_title: "Reinstate the Salt Monopoly"
  QNG_salt_monopoly_desc: "Control of the salt trade has been a standard practice for China. Even if we allow for free trade over other goods, it is in our best interest to maintain a hold on it."
  salt_mission_tt: "All owned §Ysalt§! provinces have a §YNaval Equipment Manufactory, and lower than §Y1.0%§! autonomy"
+
+ QNG_high_qing_title: "Begin High Qing"
+ QNG_high_qing_desc: "What lies beyond the horizon? We shall see."

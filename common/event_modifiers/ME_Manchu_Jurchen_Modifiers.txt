@@ -435,3 +435,7 @@ QNG_neo_confucian = {
 QNG_materialist = {
 	tolerance_own = -1
 }
+
+QNG_kangxi_emperor = {
+	all_power_cost = -0.05
+}

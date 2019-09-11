@@ -1,0 +1,10 @@
+# manchuria_region = {
+	# add_core = ROOT
+	# cede_province = ROOT
+# }
+# mongolia_region = {
+	# add_core = ROOT
+	# cede_province = ROOT
+# }
+# inherit = MNG
+set_emperor_of_china = KOR
