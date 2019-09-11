@@ -1,0 +1,5 @@
+has_era_name = {
+    OR ={
+        has_ruler_modifier = QNG_kangxi_emperor
+    }
+}

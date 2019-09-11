@@ -3658,3 +3658,293 @@ country_event = { #High Qing
 		custom_tooltip = qng_regnal_titles
 	}
 }
+
+country_event = { #choose regnal title
+	id = ME_Manchu_Events.66
+	title = ME_Manchu_Events.66.t
+	desc = ME_Manchu_Events.66.d
+	picture = COURT_eventPicture
+	
+	trigger = {
+		mission_completed = QNG_high_qing
+		NOT = { has_era_name = yes }
+		has_regency = no
+		has_consort_regency = no
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	immediate = {
+		random_list = { #adm pool
+			100 = { set_country_flag = qng_era_name_flag_1 }
+			100 = { set_country_flag = qng_era_name_flag_2 }
+			100 = { set_country_flag = qng_era_name_flag_3 }
+			100 = { set_country_flag = qng_era_name_flag_4 }
+			100 = { set_country_flag = qng_era_name_flag_5 }
+			100 = { set_country_flag = qng_era_name_flag_6 }
+			100 = { set_country_flag = qng_era_name_flag_7 }
+		}
+		random_list = { #dip pool
+			100 = { set_country_flag = qng_era_name_flag_8 }
+			100 = { set_country_flag = qng_era_name_flag_9 }
+			100 = { set_country_flag = qng_era_name_flag_10 }
+			100 = { set_country_flag = qng_era_name_flag_11 }
+			100 = { set_country_flag = qng_era_name_flag_12 }
+			100 = { set_country_flag = qng_era_name_flag_13 }
+			100 = { set_country_flag = qng_era_name_flag_14 }
+		}
+		random_list = { #mil pool
+			100 = { set_country_flag = qng_era_name_flag_15 }
+			100 = { set_country_flag = qng_era_name_flag_16 }
+			100 = { set_country_flag = qng_era_name_flag_17 }
+			100 = { set_country_flag = qng_era_name_flag_18 }
+			100 = { set_country_flag = qng_era_name_flag_19 }
+			100 = { set_country_flag = qng_era_name_flag_20 }
+			100 = { set_country_flag = qng_era_name_flag_21 }
+		}
+		random_list = { #wild card
+			100 = { set_country_flag = qng_era_name_flag_22 }
+			100 = { set_country_flag = qng_era_name_flag_23 }
+			100 = { set_country_flag = qng_era_name_flag_24 }
+			100 = { set_country_flag = qng_era_name_flag_25 }
+			100 = { set_country_flag = qng_era_name_flag_26 }
+			100 = { set_country_flag = qng_era_name_flag_27 }
+			100 = { set_country_flag = qng_era_name_flag_28 }
+		}
+
+	}
+
+	#adm options
+	option = {
+		name = ME_Manchu_Events.66.1
+		trigger = { has_country_flag = qng_era_name_flag_1 }
+		add_ruler_modifier = {
+			name = QNG_era_name_xuantong
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.2
+		trigger = { has_country_flag = qng_era_name_flag_2 }
+		add_ruler_modifier = {
+			name = QNG_era_name_daoguang
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.3
+		trigger = { has_country_flag = qng_era_name_flag_3 }
+		add_ruler_modifier = {
+			name = QNG_era_name_shunzhi
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.4
+		trigger = { has_country_flag = qng_era_name_flag_4 }
+		add_ruler_modifier = {
+			name = QNG_era_name_yongli
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.5
+		trigger = { has_country_flag = qng_era_name_flag_5 }
+		add_ruler_modifier = {
+			name = QNG_era_name_yongchang
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.6
+		trigger = { has_country_flag = qng_era_name_flag_6 }
+		add_ruler_modifier = {
+			name = QNG_era_name_wanli
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.7
+		trigger = { has_country_flag = qng_era_name_flag_7 }
+		add_ruler_modifier = {
+			name = QNG_era_name_hongzhi
+			duration = -1
+		}
+	}
+
+	#dip options
+	option = {
+		name = ME_Manchu_Events.66.8
+		trigger = { has_country_flag = qng_era_name_flag_8 }
+		add_ruler_modifier = {
+			name = QNG_era_name_guagnxu
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.9
+		trigger = { has_country_flag = qng_era_name_flag_9 }
+		add_ruler_modifier = {
+			name = QNG_era_name_jiaqing
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.10
+		trigger = { has_country_flag = qng_era_name_flag_10 }
+		add_ruler_modifier = {
+			name = QNG_era_name_tiancong
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.11
+		trigger = { has_country_flag = qng_era_name_flag_11 }
+		add_ruler_modifier = {
+			name = QNG_era_name_shaowu
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.12
+		trigger = { has_country_flag = qng_era_name_flag_12 }
+		add_ruler_modifier = {
+			name = QNG_era_name_chongzhen
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.13
+		trigger = { has_country_flag = qng_era_name_flag_13 }
+		add_ruler_modifier = {
+			name = QNG_era_name_longqing
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.14
+		trigger = { has_country_flag = qng_era_name_flag_14 }
+		add_ruler_modifier = {
+			name = QNG_era_name_jingtai
+			duration = -1
+		}
+	}
+
+	#mil options
+	option = {
+		name = ME_Manchu_Events.66.15
+		trigger = { has_country_flag = qng_era_name_flag_15 }
+		add_ruler_modifier = {
+			name = QNG_era_name_tongzhi 
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.16
+		trigger = { has_country_flag = qng_era_name_flag_16 }
+		add_ruler_modifier = {
+			name = QNG_era_name_qianlong
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.17
+		trigger = { has_country_flag = qng_era_name_flag_17 }
+		add_ruler_modifier = {
+			name = QNG_era_name_chongde
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.18
+		trigger = { has_country_flag = qng_era_name_flag_18 }
+		add_ruler_modifier = {
+			name = QNG_era_name_longwu
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.19
+		trigger = { has_country_flag = qng_era_name_flag_19 }
+		add_ruler_modifier = {
+			name = QNG_era_name_tianqi
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.20
+		trigger = { has_country_flag = qng_era_name_flag_20 }
+		add_ruler_modifier = {
+			name = QNG_era_name_jiajing
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.21
+		trigger = { has_country_flag = qng_era_name_flag_21 }
+		add_ruler_modifier = {
+			name = QNG_era_name_tianshun
+			duration = -1
+		}
+	}
+
+	#wild card options
+	option = {
+		name = ME_Manchu_Events.66.22
+		trigger = { has_country_flag = qng_era_name_flag_22 }
+		add_ruler_modifier = {
+			name = QNG_era_name_xiangfeng
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.23
+		trigger = { has_country_flag = qng_era_name_flag_23 }
+		add_ruler_modifier = {
+			name = QNG_era_name_yongzheng
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.24
+		trigger = { has_country_flag = qng_era_name_flag_24 }
+		add_ruler_modifier = {
+			name = QNG_era_name_tianming
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.25
+		trigger = { has_country_flag = qng_era_name_flag_25 }
+		add_ruler_modifier = {
+			name = QNG_era_name_hongguang
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.26
+		trigger = { has_country_flag = qng_era_name_flag_26 }
+		add_ruler_modifier = {
+			name = QNG_era_name_taichang
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.27
+		trigger = { has_country_flag = qng_era_name_flag_27 }
+		add_ruler_modifier = {
+			name = QNG_era_name_zhengde
+			duration = -1
+		}
+	}
+	option = {
+		name = ME_Manchu_Events.66.28
+		trigger = { has_country_flag = qng_era_name_flag_28 }
+		add_ruler_modifier = {
+			name = QNG_era_name_
+			duration = -1
+		}
+	}
+}
