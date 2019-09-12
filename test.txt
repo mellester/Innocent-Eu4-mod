@@ -6,5 +6,8 @@
 	# add_core = ROOT
 	# cede_province = ROOT
 # }
-# inherit = MNG
-set_emperor_of_china = KOR
+define_ruler = {
+    dynasty = ROOT
+    culture = ROOT
+    religion = ROOT
+}

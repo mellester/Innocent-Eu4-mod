@@ -177,7 +177,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		704 = { #ningyuan
-			IF = {
+			if = {
 				limit = {
 					owned_by = MNG
 				}
@@ -185,7 +185,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		726 = {#shenyang
-			IF = {
+			if = {
 				limit = {
 					owned_by = MNG
 				}
@@ -193,7 +193,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		2113 = {#gaizhou
-			IF = {
+			if = {
 				limit = {
 					owned_by = MNG
 				}
@@ -201,7 +201,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		2112 = {#andong
-			IF = {
+			if = {
 				limit = {
 					owned_by = MNG
 				}
@@ -224,7 +224,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		704 = {
-			IF = {
+			if = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -232,7 +232,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		726 = {
-			IF = {
+			if = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -240,7 +240,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		2113 = {
-			IF = {
+			if = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -248,7 +248,7 @@ country_event = { #siezure of liaoning
 			}
 		}
 		2112 = {
-			IF = {
+			if = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -1454,7 +1454,7 @@ country_event = { #invasion of taiwan
 		name = ME_Manchu_Events.25.a
 		
 		taiwan_area = {
-			add_siberian_construction = 100
+			add_nationalism = -5
 		}
 		
 		738 = {
@@ -1468,9 +1468,9 @@ country_event = { #invasion of taiwan
 	option = { #colonize taiwan
 		name = ME_Manchu_Events.25.b
 		
-		taiwan_area = {
-			add_siberian_construction = 100
-		}
+		# taiwan_area = {
+			# add_siberian_construction = 100
+		# }
 		
 		add_country_modifier = {
 			name = QNG_end_of_ming_loyalists
@@ -3647,6 +3647,15 @@ country_event = { #High Qing
 	fire_only_once = yes
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = eraNameCounter
+				value = 0
+			}
+		}
+	}
+	
 	option = {
 		name = ME_Manchu_Events.65.a
 		
@@ -3669,107 +3678,344 @@ country_event = { #choose regnal title
 		mission_completed = QNG_high_qing
 		NOT = { has_era_name = yes }
 		has_regency = no
-		has_consort_regency = no
+		NOT = {
+			check_variable = {
+				which = eraNameCounter
+				value = 28
+			}
+		}
 	}
 
 	mean_time_to_happen = {
-		months = 3
+		months = 1
 	}
 
 	immediate = {
-		random_list = { #adm pool
-			100 = { set_country_flag = qng_era_name_flag_1 }
-			100 = { set_country_flag = qng_era_name_flag_2 }
-			100 = { set_country_flag = qng_era_name_flag_3 }
-			100 = { set_country_flag = qng_era_name_flag_4 }
-			100 = { set_country_flag = qng_era_name_flag_5 }
-			100 = { set_country_flag = qng_era_name_flag_6 }
-			100 = { set_country_flag = qng_era_name_flag_7 }
+		hidden_effect = {
+			change_variable = {
+				which = eraNameCounter
+				value = 1
+			}
 		}
-		random_list = { #dip pool
-			100 = { set_country_flag = qng_era_name_flag_8 }
-			100 = { set_country_flag = qng_era_name_flag_9 }
-			100 = { set_country_flag = qng_era_name_flag_10 }
-			100 = { set_country_flag = qng_era_name_flag_11 }
-			100 = { set_country_flag = qng_era_name_flag_12 }
-			100 = { set_country_flag = qng_era_name_flag_13 }
-			100 = { set_country_flag = qng_era_name_flag_14 }
+		if = {
+			limit = {
+				NOT = {
+					AND = {
+						has_country_flag = qng_era_name_flag_1_used
+						has_country_flag = qng_era_name_flag_2_used
+						has_country_flag = qng_era_name_flag_3_used
+						has_country_flag = qng_era_name_flag_4_used
+						has_country_flag = qng_era_name_flag_5_used
+						has_country_flag = qng_era_name_flag_6_used
+						has_country_flag = qng_era_name_flag_7_used
+					}
+				}
+			}
+			while = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								has_country_flag = qng_era_name_flag_1
+								NOT = { has_country_flag = qng_era_name_flag_1_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_2
+								NOT = { has_country_flag = qng_era_name_flag_2_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_3
+								NOT = { has_country_flag = qng_era_name_flag_3_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_4
+								NOT = { has_country_flag = qng_era_name_flag_4_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_5
+								NOT = { has_country_flag = qng_era_name_flag_5_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_6
+								NOT = { has_country_flag = qng_era_name_flag_6_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_7
+								NOT = { has_country_flag = qng_era_name_flag_7_used }
+							}
+						}
+					}
+				}
+				random_list = { #adm pool
+					100 = { set_country_flag = qng_era_name_flag_1 }
+					100 = { set_country_flag = qng_era_name_flag_2 }
+					100 = { set_country_flag = qng_era_name_flag_3 }
+					100 = { set_country_flag = qng_era_name_flag_4 }
+					100 = { set_country_flag = qng_era_name_flag_5 }
+					100 = { set_country_flag = qng_era_name_flag_6 }
+					100 = { set_country_flag = qng_era_name_flag_7 }
+				}
+			}
 		}
-		random_list = { #mil pool
-			100 = { set_country_flag = qng_era_name_flag_15 }
-			100 = { set_country_flag = qng_era_name_flag_16 }
-			100 = { set_country_flag = qng_era_name_flag_17 }
-			100 = { set_country_flag = qng_era_name_flag_18 }
-			100 = { set_country_flag = qng_era_name_flag_19 }
-			100 = { set_country_flag = qng_era_name_flag_20 }
-			100 = { set_country_flag = qng_era_name_flag_21 }
+		if = {
+			limit = {
+				NOT = {
+					AND = {
+						has_country_flag = qng_era_name_flag_8_used
+						has_country_flag = qng_era_name_flag_9_used
+						has_country_flag = qng_era_name_flag_10_used
+						has_country_flag = qng_era_name_flag_11_used
+						has_country_flag = qng_era_name_flag_12_used
+						has_country_flag = qng_era_name_flag_13_used
+						has_country_flag = qng_era_name_flag_14_used
+					}
+				}
+			}
+			while = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								has_country_flag = qng_era_name_flag_8
+								NOT = { has_country_flag = qng_era_name_flag_8_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_9
+								NOT = { has_country_flag = qng_era_name_flag_9_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_10
+								NOT = { has_country_flag = qng_era_name_flag_10_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_11
+								NOT = { has_country_flag = qng_era_name_flag_11_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_12
+								NOT = { has_country_flag = qng_era_name_flag_12_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_13
+								NOT = { has_country_flag = qng_era_name_flag_13_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_14
+								NOT = { has_country_flag = qng_era_name_flag_14_used }
+							}
+						}
+					}
+				}
+				random_list = { #dip pool
+					100 = { set_country_flag = qng_era_name_flag_8 }
+					100 = { set_country_flag = qng_era_name_flag_9 }
+					100 = { set_country_flag = qng_era_name_flag_10 }
+					100 = { set_country_flag = qng_era_name_flag_11 }
+					100 = { set_country_flag = qng_era_name_flag_12 }
+					100 = { set_country_flag = qng_era_name_flag_13 }
+					100 = { set_country_flag = qng_era_name_flag_14 }
+				}
+			}
 		}
-		random_list = { #wild card
-			100 = { set_country_flag = qng_era_name_flag_22 }
-			100 = { set_country_flag = qng_era_name_flag_23 }
-			100 = { set_country_flag = qng_era_name_flag_24 }
-			100 = { set_country_flag = qng_era_name_flag_25 }
-			100 = { set_country_flag = qng_era_name_flag_26 }
-			100 = { set_country_flag = qng_era_name_flag_27 }
-			100 = { set_country_flag = qng_era_name_flag_28 }
+		if = {
+			limit = {
+				NOT = {
+					AND = {
+						has_country_flag = qng_era_name_flag_15_used
+						has_country_flag = qng_era_name_flag_16_used
+						has_country_flag = qng_era_name_flag_17_used
+						has_country_flag = qng_era_name_flag_18_used
+						has_country_flag = qng_era_name_flag_19_used
+						has_country_flag = qng_era_name_flag_20_used
+						has_country_flag = qng_era_name_flag_21_used
+					}
+				}
+			}
+			while = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								has_country_flag = qng_era_name_flag_15
+								NOT = { has_country_flag = qng_era_name_flag_15_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_16
+								NOT = { has_country_flag = qng_era_name_flag_16_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_17
+								NOT = { has_country_flag = qng_era_name_flag_17_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_18
+								NOT = { has_country_flag = qng_era_name_flag_18_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_19
+								NOT = { has_country_flag = qng_era_name_flag_19_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_20
+								NOT = { has_country_flag = qng_era_name_flag_20_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_21
+								NOT = { has_country_flag = qng_era_name_flag_21_used }
+							}
+						}
+					}
+				}
+				random_list = { #mil pool
+					100 = { set_country_flag = qng_era_name_flag_15 }
+					100 = { set_country_flag = qng_era_name_flag_16 }
+					100 = { set_country_flag = qng_era_name_flag_17 }
+					100 = { set_country_flag = qng_era_name_flag_18 }
+					100 = { set_country_flag = qng_era_name_flag_19 }
+					100 = { set_country_flag = qng_era_name_flag_20 }
+					100 = { set_country_flag = qng_era_name_flag_21 }
+				}
+			}
 		}
-
+		if = {
+			limit = {
+				NOT = {
+					AND = {
+						has_country_flag = qng_era_name_flag_22_used
+						has_country_flag = qng_era_name_flag_23_used
+						has_country_flag = qng_era_name_flag_24_used
+						has_country_flag = qng_era_name_flag_25_used
+						has_country_flag = qng_era_name_flag_26_used
+						has_country_flag = qng_era_name_flag_27_used
+						has_country_flag = qng_era_name_flag_28_used
+					}
+				}
+			}
+			while = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								has_country_flag = qng_era_name_flag_22
+								NOT = { has_country_flag = qng_era_name_flag_22_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_23
+								NOT = { has_country_flag = qng_era_name_flag_23_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_24
+								NOT = { has_country_flag = qng_era_name_flag_24_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_25
+								NOT = { has_country_flag = qng_era_name_flag_25_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_26
+								NOT = { has_country_flag = qng_era_name_flag_26_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_27
+								NOT = { has_country_flag = qng_era_name_flag_27_used }
+							}
+							AND = {
+								has_country_flag = qng_era_name_flag_28
+								NOT = { has_country_flag = qng_era_name_flag_28_used }
+							}
+						}
+					}
+				}
+				random_list = { #wild pool
+					100 = { set_country_flag = qng_era_name_flag_22 }
+					100 = { set_country_flag = qng_era_name_flag_23 }
+					100 = { set_country_flag = qng_era_name_flag_24 }
+					100 = { set_country_flag = qng_era_name_flag_25 }
+					100 = { set_country_flag = qng_era_name_flag_26 }
+					100 = { set_country_flag = qng_era_name_flag_27 }
+					100 = { set_country_flag = qng_era_name_flag_28 }
+				}
+			}
+		}
 	}
 
 	#adm options
 	option = {
 		name = ME_Manchu_Events.66.1
-		trigger = { has_country_flag = qng_era_name_flag_1 }
+		trigger = {
+			has_country_flag = qng_era_name_flag_1
+			NOT = { has_country_flag = qng_era_name_flag_1_used }
+		}
+		set_country_flag = qng_era_name_flag_1_used
 		add_ruler_modifier = {
-			name = QNG_era_name_xuantong
+			name = QNG_era_name_xuantong #idk what this means
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.2
-		trigger = { has_country_flag = qng_era_name_flag_2 }
+		trigger = {
+			has_country_flag = qng_era_name_flag_2
+			NOT = { has_country_flag = qng_era_name_flag_2_used }
+		}
+		set_country_flag = qng_era_name_flag_2_used
 		add_ruler_modifier = {
-			name = QNG_era_name_daoguang
+			name = QNG_era_name_daoguang #idk what this means either
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.3
-		trigger = { has_country_flag = qng_era_name_flag_3 }
+		trigger = { has_country_flag = qng_era_name_flag_3
+			NOT = { has_country_flag = qng_era_name_flag_3_used }
+		}
+		set_country_flag = qng_era_name_flag_3_used
 		add_ruler_modifier = {
-			name = QNG_era_name_shunzhi
+			name = QNG_era_name_shunzhi #Smoothly-Ruling
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.4
-		trigger = { has_country_flag = qng_era_name_flag_4 }
+		trigger = { has_country_flag = qng_era_name_flag_4
+			NOT = { has_country_flag = qng_era_name_flag_4_used }
+		}
+		set_country_flag = qng_era_name_flag_4_used
 		add_ruler_modifier = {
-			name = QNG_era_name_yongli
+			name = QNG_era_name_yongli #perpetual calendar
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.5
-		trigger = { has_country_flag = qng_era_name_flag_5 }
+		trigger = { has_country_flag = qng_era_name_flag_5
+			NOT = { has_country_flag = qng_era_name_flag_5_used }
+		}
+		set_country_flag = qng_era_name_flag_5_used
 		add_ruler_modifier = {
-			name = QNG_era_name_yongchang
+			name = QNG_era_name_yongchang #??
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.6
-		trigger = { has_country_flag = qng_era_name_flag_6 }
+		trigger = { has_country_flag = qng_era_name_flag_6
+			NOT = { has_country_flag = qng_era_name_flag_6_used }
+		}
+		set_country_flag = qng_era_name_flag_6_used
 		add_ruler_modifier = {
-			name = QNG_era_name_wanli
+			name = QNG_era_name_wanli #ten thousand calendars
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.7
-		trigger = { has_country_flag = qng_era_name_flag_7 }
+		trigger = { has_country_flag = qng_era_name_flag_7
+			NOT = { has_country_flag = qng_era_name_flag_7_used }
+		}
+		set_country_flag = qng_era_name_flag_7_used
 		add_ruler_modifier = {
-			name = QNG_era_name_hongzhi
+			name = QNG_era_name_hongzhi #great government
 			duration = -1
 		}
 	}
@@ -3777,57 +4023,78 @@ country_event = { #choose regnal title
 	#dip options
 	option = {
 		name = ME_Manchu_Events.66.8
-		trigger = { has_country_flag = qng_era_name_flag_8 }
+		trigger = { has_country_flag = qng_era_name_flag_8
+			NOT = { has_country_flag = qng_era_name_flag_8_used }
+		}
+		set_country_flag = qng_era_name_flag_8_used
 		add_ruler_modifier = {
-			name = QNG_era_name_guagnxu
+			name = QNG_era_name_guagnxu #glorius succession
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.9
-		trigger = { has_country_flag = qng_era_name_flag_9 }
+		trigger = { has_country_flag = qng_era_name_flag_9
+			NOT = { has_country_flag = qng_era_name_flag_9_used }
+		}
+		set_country_flag = qng_era_name_flag_9_used
 		add_ruler_modifier = {
-			name = QNG_era_name_jiaqing
+			name = QNG_era_name_jiaqing #?
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.10
-		trigger = { has_country_flag = qng_era_name_flag_10 }
+		trigger = { has_country_flag = qng_era_name_flag_10
+			NOT = { has_country_flag = qng_era_name_flag_10_used }
+		}
+		set_country_flag = qng_era_name_flag_10_used
 		add_ruler_modifier = {
-			name = QNG_era_name_tiancong
+			name = QNG_era_name_tiancong #heavenly wisdom
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.11
-		trigger = { has_country_flag = qng_era_name_flag_11 }
+		trigger = { has_country_flag = qng_era_name_flag_11
+			NOT = { has_country_flag = qng_era_name_flag_11_used }
+		}
+		set_country_flag = qng_era_name_flag_11_used
 		add_ruler_modifier = {
-			name = QNG_era_name_shaowu
+			name = QNG_era_name_shaowu #?
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.12
-		trigger = { has_country_flag = qng_era_name_flag_12 }
+		trigger = { has_country_flag = qng_era_name_flag_12
+			NOT = { has_country_flag = qng_era_name_flag_12_used }
+		}
+		set_country_flag = qng_era_name_flag_12_used
 		add_ruler_modifier = {
-			name = QNG_era_name_chongzhen
+			name = QNG_era_name_chongzhen #honorable and auspicious
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.13
-		trigger = { has_country_flag = qng_era_name_flag_13 }
+		trigger = { has_country_flag = qng_era_name_flag_13
+			NOT = { has_country_flag = qng_era_name_flag_13_used }
+		}
+		set_country_flag = qng_era_name_flag_13_used
 		add_ruler_modifier = {
-			name = QNG_era_name_longqing
+			name = QNG_era_name_longqing #great celebration
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.14
-		trigger = { has_country_flag = qng_era_name_flag_14 }
+		trigger = { has_country_flag = qng_era_name_flag_14
+			NOT = { has_country_flag = qng_era_name_flag_14_used }
+		}
+		set_country_flag = qng_era_name_flag_14_used
 		add_ruler_modifier = {
-			name = QNG_era_name_jingtai
+			name = QNG_era_name_jingtai #exhalted view
 			duration = -1
 		}
 	}
@@ -3835,57 +4102,78 @@ country_event = { #choose regnal title
 	#mil options
 	option = {
 		name = ME_Manchu_Events.66.15
-		trigger = { has_country_flag = qng_era_name_flag_15 }
+		trigger = { has_country_flag = qng_era_name_flag_15
+			NOT = { has_country_flag = qng_era_name_flag_15_used }
+		}
+		set_country_flag = qng_era_name_flag_15_used
 		add_ruler_modifier = {
-			name = QNG_era_name_tongzhi 
+			name = QNG_era_name_tongzhi #restore order together
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.16
-		trigger = { has_country_flag = qng_era_name_flag_16 }
+		trigger = { has_country_flag = qng_era_name_flag_16
+			NOT = { has_country_flag = qng_era_name_flag_16_used }
+		}
+		set_country_flag = qng_era_name_flag_16_used
 		add_ruler_modifier = {
-			name = QNG_era_name_qianlong
+			name = QNG_era_name_qianlong #lasting eminence
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.17
-		trigger = { has_country_flag = qng_era_name_flag_17 }
+		trigger = { has_country_flag = qng_era_name_flag_17
+			NOT = { has_country_flag = qng_era_name_flag_17_used }
+		}
+		set_country_flag = qng_era_name_flag_17_used
 		add_ruler_modifier = {
-			name = QNG_era_name_chongde
+			name = QNG_era_name_chongde #lofty virtue
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.18
-		trigger = { has_country_flag = qng_era_name_flag_18 }
+		trigger = { has_country_flag = qng_era_name_flag_18
+			NOT = { has_country_flag = qng_era_name_flag_18_used }
+		}
+		set_country_flag = qng_era_name_flag_18_used
 		add_ruler_modifier = {
-			name = QNG_era_name_longwu
+			name = QNG_era_name_longwu #plentiful and martial
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.19
-		trigger = { has_country_flag = qng_era_name_flag_19 }
+		trigger = { has_country_flag = qng_era_name_flag_19
+			NOT = { has_country_flag = qng_era_name_flag_19_used }
+		}
+		set_country_flag = qng_era_name_flag_19_used
 		add_ruler_modifier = {
-			name = QNG_era_name_tianqi
+			name = QNG_era_name_tianqi #heavenly opening
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.20
-		trigger = { has_country_flag = qng_era_name_flag_20 }
+		trigger = { has_country_flag = qng_era_name_flag_20
+			NOT = { has_country_flag = qng_era_name_flag_20_used }
+		}
+		set_country_flag = qng_era_name_flag_20_used
 		add_ruler_modifier = {
-			name = QNG_era_name_jiajing
+			name = QNG_era_name_jiajing #admirable tranquility
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.21
-		trigger = { has_country_flag = qng_era_name_flag_21 }
+		trigger = { has_country_flag = qng_era_name_flag_21
+			NOT = { has_country_flag = qng_era_name_flag_21_used }
+		}
+		set_country_flag = qng_era_name_flag_21_used
 		add_ruler_modifier = {
-			name = QNG_era_name_tianshun
+			name = QNG_era_name_tianshun #obedience to heaven
 			duration = -1
 		}
 	}
@@ -3893,57 +4181,79 @@ country_event = { #choose regnal title
 	#wild card options
 	option = {
 		name = ME_Manchu_Events.66.22
-		trigger = { has_country_flag = qng_era_name_flag_22 }
+		trigger = { has_country_flag = qng_era_name_flag_22
+			NOT = { has_country_flag = qng_era_name_flag_22_used }
+		}
+		set_country_flag = qng_era_name_flag_22_used
 		add_ruler_modifier = {
-			name = QNG_era_name_xiangfeng
+			name = QNG_era_name_xiangfeng #universal prosperity
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.23
-		trigger = { has_country_flag = qng_era_name_flag_23 }
+		trigger = { has_country_flag = qng_era_name_flag_23
+			NOT = { has_country_flag = qng_era_name_flag_23_used }
+		}
+		set_country_flag = qng_era_name_flag_23_used
 		add_ruler_modifier = {
-			name = QNG_era_name_yongzheng
+			name = QNG_era_name_yongzheng #harmonius justice
 			duration = -1
 		}
+		change_dip = 2
 	}
 	option = {
 		name = ME_Manchu_Events.66.24
-		trigger = { has_country_flag = qng_era_name_flag_24 }
+		trigger = { has_country_flag = qng_era_name_flag_24
+			NOT = { has_country_flag = qng_era_name_flag_24_used }
+		}
+		set_country_flag = qng_era_name_flag_24_used
 		add_ruler_modifier = {
-			name = QNG_era_name_tianming
+			name = QNG_era_name_tianming #The Emperor of Heaven's Mandate
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.25
-		trigger = { has_country_flag = qng_era_name_flag_25 }
+		trigger = { has_country_flag = qng_era_name_flag_25
+			NOT = { has_country_flag = qng_era_name_flag_25_used }
+		}
+		set_country_flag = qng_era_name_flag_25_used
 		add_ruler_modifier = {
-			name = QNG_era_name_hongguang
+			name = QNG_era_name_hongguang #??
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.26
-		trigger = { has_country_flag = qng_era_name_flag_26 }
+		trigger = { has_country_flag = qng_era_name_flag_26
+			NOT = { has_country_flag = qng_era_name_flag_26_used }
+		}
+		set_country_flag = qng_era_name_flag_26_used
 		add_ruler_modifier = {
-			name = QNG_era_name_taichang
+			name = QNG_era_name_taichang #grand prosperity
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.27
-		trigger = { has_country_flag = qng_era_name_flag_27 }
+		trigger = { has_country_flag = qng_era_name_flag_27
+			NOT = { has_country_flag = qng_era_name_flag_27_used }
+		}
+		set_country_flag = qng_era_name_flag_27_used
 		add_ruler_modifier = {
-			name = QNG_era_name_zhengde
+			name = QNG_era_name_zhengde #right virtue
 			duration = -1
 		}
 	}
 	option = {
 		name = ME_Manchu_Events.66.28
-		trigger = { has_country_flag = qng_era_name_flag_28 }
+		trigger = { has_country_flag = qng_era_name_flag_28
+			NOT = { has_country_flag = qng_era_name_flag_28_used }
+		}
+		set_country_flag = qng_era_name_flag_28_used
 		add_ruler_modifier = {
-			name = QNG_era_name_
+			name = QNG_era_name_chenghua #accomplished change
 			duration = -1
 		}
 	}

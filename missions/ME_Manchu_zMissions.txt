@@ -811,10 +811,7 @@ qing_missions_2 = {
 		trigger = {
 			taiwan_area = {
 				type = all
-				OR = {
-					NOT = { native_size = 1 }
-					is_core = ROOT
-				}
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -920,19 +917,19 @@ qing_missions_2 = {
 			}
 			2999 = { #hormuz
 				trade_share = {
-					who = ROOT
+					country = ROOT
 					share = 15
 				}
 			}
 			388 = { #aden
 				trade_share = {
-					who = ROOT
+					country = ROOT
 					share = 15
 				}
 			}
 			534 = { #coromandel
 				trade_share = {
-					who = ROOT
+					country = ROOT
 					share = 15
 				}
 			}
@@ -1058,8 +1055,8 @@ manchu_missions_3 = {
 				army_size_percentage = 1.1
 				manpower_percentage = 0.6
 			}
-			is_in_war = {
-				attacker_leader = ROOT
+			1816 = { #beijing
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -1611,7 +1608,7 @@ qing_missions_3 = {
 		}
 		effect = {
 			country_event = {
-				id = ME_Manchu_Events.63
+				id = ME_Manchu_Events.65
 			}
 		}
 	}
@@ -1952,8 +1949,10 @@ qing_missions_4 = {
 			}
 			else = {
 				1065 = {
-					limit = {
-						is_empty = yes
+					if = {
+						limit = {
+							is_empty = yes
+						}
 					}
 					add_siberian_construction = 100
 				}
@@ -2067,7 +2066,7 @@ qing_missions_4 = {
 		trigger = {
 			656 = {
 				trade_share = {
-					who = ROOT
+					country  = ROOT
 					share = 50
 				}
 			}
@@ -2430,7 +2429,7 @@ qing_missions_5 = {
 	QNG_reform_1 = { #reform the Six Ministries
 		icon = mission_chinese_general_riding
 		required_missions = {
-			reforming_the_administration
+			integrate_han_chinese
 			abolish_the_mandate_of_heaven
 		}
 		position = 11
