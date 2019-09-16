@@ -137,7 +137,7 @@ l_english:
  ME_Manchu_Events.23.b: "It could be expensive... Find a generalized tax rate."
  
  ME_Manchu_Events.24.t: "Costly Tributary Visits"
- ME_Manchu_Events.24.d: "A great many kingdoms and states reognize the supremacy of the Qing Empire and willingly pay tribute to the Emperor. Depending on the subject, they may send an envoy to [Root.Capital.GetName] anually or perhaps every five years. Being the prosperous empire that we are, it is expected that we should recieve these guests with proper hospitality. Great gifts are exchanged on behalf of these visiting dignitaries and lavish accomodations are provided; neither of these come free. It has come to the attention of the Board of Rites that these expenses are contiuning to mount..."
+ ME_Manchu_Events.24.d: "A great many kingdoms and states reognize the supremacy of the Qing Empire and willingly pay tribute to the Emperor. Depending on the subject, they may send an envoy to [Root.Capital.GetName] annually or perhaps every five years. Being the prosperous empire that we are, it is expected that we should recieve these guests with proper hospitality. Great gifts are exchanged on behalf of these visiting dignitaries and lavish accomodations are provided; neither of these come free. It has come to the attention of the Board of Rites that these expenses are contiuning to mount..."
  ME_Manchu_Events.24.a: "Call for a reduction of tributary visits."
  ME_Manchu_Events.24.b: "No need to be so stingy."
  qng_sometimes_envoy_events: "Occassional envoy events will occur"
@@ -191,6 +191,12 @@ l_english:
  ME_Manchu_Events.33.a: "Who knew inflation could be a positive?"
  ME_Manchu_Events.33.b: "Controlling the currency seems to have paid off."
  ME_Manchu_Events.33.c: "Our coins are now regarded much more favorably in foreign markets."
+
+ ME_Manchu_Events.34.t: "Modernizing the Examinations"
+ ME_Manchu_Events.34.d: "Traditionally, the Examination system has relied heavily on knowledge of the Confucian Classics, touching somewhat on current events, politics, and history; meanwhile, military examinations rely on classical tactics and archery. Recent developments have meant that foreign influences from the West, the Steppes, and the Subcontinent have begun to creep into Chinese society. No longer are the Chinese classics the only relevant knowledge. Firearms are becoming ever more commonplace, foreign religions such as Christianity and Islam are finding followers here in China, and innovative new technologies are being invented constantly."
+ ME_Manchu_Events.34.a: "Me must retain traditional values."
+ ME_Manchu_Events.34.b: "Some updated topics can't hurt."
+ qng_new_exams_flag_tt: "We will investigate these new ideas."
 
  ME_Manchu_Events.35.t: "Milk Tea and Gong Cha"
  ME_Manchu_Events.35.d: "Gong Cha, or the imperial tea, is a special brand of tea granted special favor amongst the imperial court of China. Legend has it that the emperor was presented a cup of Longjing Tea, or Dragonwell Tea, at the Hu Gong Temple. The Emperor was so impressed with this tea that he granted the eighteen tea bushes at the Temple the status of Gong Cha. The tea has now become popularized all over China; the original eighteen bushes now produce tea valued more than their weight in gold.\n\nElsewhere, the Manchu practice of adding milk to tea has begun to catch on with foreigners. The Han natives of China may have no great love for milk tea, but it seems that we can sell this to others."
@@ -373,6 +379,11 @@ l_english:
  ME_Manchu_Events.66.26: "Hóngguang."
  ME_Manchu_Events.66.27: "Tàichang."
  ME_Manchu_Events.66.28: "Zhèngdé."
+
+ ME_Manchu_Events.67.t: "Consulting the Huidian"
+ ME_Manchu_Events.67.d: "Much of the Qing government's structure was taken and adapted from the Ming's own structure. These practices and organizations were compiled in the Huidian. We refer to this corpus once again to learn from our predecessor's procedure on sacrificial rites. We have no uniform practice on how to go about annual practices. The Ming Huidian recommends to do all annual sacrifices simultaneously, as opposed to our current practice of separately."
+ ME_Manchu_Events.67.a: ""
+ ME_Manchu_Events.67.b: ""
 
 #government titles
  TITLE_kangxi: "§MKangxi Emperor§!"
@@ -695,6 +706,9 @@ l_english:
  
  QNG_schreck: "Johann Schreck, Court Physician"
  desc_QNG_schreck: "We'll never get sick now!"
+
+ QNG_traditional_exams: "Traditional Examinations"
+ desc_QNG_traditional_exams: "Learn the classics!"
 
  #decisions
  QNG_great_clearance_title: "The Great Clearance"

@@ -329,5 +329,10 @@ on_four_year_pulse_4 = {
 		100 = ME_Manchu_Events.21
 		100 = ME_Manchu_Events.22
 		100 = ME_Manchu_Events.23
+
+		# Bourd of Rites chain
+		100 = ME_Manchu_Events.24
+		100 = ME_Manchu_Events.34
+		100 = ME_Manchu_Events.67
 	}
 }

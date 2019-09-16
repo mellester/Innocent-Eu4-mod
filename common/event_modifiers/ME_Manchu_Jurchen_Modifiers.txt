@@ -538,3 +538,8 @@ QNG_thomas_observatory = {
 QNG_schreck = {
 	technology_cost = -0.05
 }
+
+QNG_traditional_exams = {
+	army_tradition_decay = -0.005
+	adm_tech_cost_modifier = -0.05
+}

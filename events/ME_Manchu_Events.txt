@@ -4,8 +4,7 @@ namespace = ME_Manchu_Events
 #16-24 ministry of reform event chains
 #25-30 mission triggered events
 #31-32 nerchinsk
-#33 ministry events
-#34 not used
+#33-34 ministry events
 #35-37 mission triggered events
 #38-39 opium epidemic
 #40-43 mission triggered events
@@ -2210,36 +2209,74 @@ country_event = { #Ministry of Revenue followup - import silver en masse
 	}
 }
 
-# country_event = { #kai-le event
-# 	id = ME_Manchu_Events.34
-# 	title = ME_Manchu_Events.34.t
-# 	desc = ME_Manchu_Events.34.d
-# 	picture = COURT_eventPicture
+country_event = { #ministry of rites 2 - examinations foreign knowledge
+	id = ME_Manchu_Events.34
+	title = ME_Manchu_Events.34.t
+	desc = ME_Manchu_Events.34.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = reformed_ministry_rites
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			change_variable = {
+				which = reformChainProgress
+				value = 1
+			}
+		}
+	}
+	
+	option = { #classics
+		name = ME_Manchu_Events.34.a
+		
+		add_country_modifier = {
+			name = QNG_traditional_exams
+			duration = 18250
+		}
 
-# 	trigger = {
-# 		has_country_flag = qng_ranked_lists_flag
-# 		mission_completed = QNG_advisors
-# 	}
+		if = {
+			limit = {
+				check_variable = {
+					which = reformChainProgress
+					value = 3
+				}
+			}
+			clr_country_flag = reformed_ministry_rites
+			set_country_flag = finished_rites_event_chain_flag
+			custom_tooltip =  completed_ministry_rites_chain_tooltip
+		}
+	}
 
-# 	mean_time_to_happen = {
-# 		months = 360
-# 	}
-	
-# 	option = { #adm
-# 		name = ME_Manchu_Events.34.a
+	option = { #new examination topics
+		name = ME_Manchu_Events.34.b
 		
-# 	}
-	
-# 	option = { #dip
-# 		name = ME_Manchu_Events.34.b
-		
-# 	}
-	
-# 	option = { #mil
-# 		name = ME_Manchu_Events.34.c
-		
-# 	}
-# }
+		hidden_effect = {
+			set_country_flag = qng_new_exams_flag
+		}
+		custom_tooltip = qng_new_exams_flag_tt
+
+		if = {
+			limit = {
+				check_variable = {
+					which = reformChainProgress
+					value = 3
+				}
+			}
+			clr_country_flag = reformed_ministry_rites
+			set_country_flag = finished_rites_event_chain_flag
+			custom_tooltip =  completed_ministry_rites_chain_tooltip
+		}
+	}
+}
 
 country_event = { #gong-cha
 	id = ME_Manchu_Events.35
@@ -2729,10 +2766,11 @@ country_event = { #envoy event 1 (enabled by .24)
 	trigger = {
 		tag = QNG
 		has_country_flag = qng_lavish_envoys
+		NOT = { has_ruler_modifier = QNG_generous_host }
 	}
 	
 	mean_time_to_happen = {
-		months = 60
+		months = 120
 	}
 	
 	immediate = {
@@ -3843,7 +3881,7 @@ country_event = { #Johann Schreck
 }
 
 country_event = { #Minggatu
-	i = ME_Manchu_Events.63
+	id = ME_Manchu_Events.63
 	title = ME_Manchu_Events.63.t
 	desc = ME_Manchu_Events.63.d
 	picture = COURT_eventPicture
@@ -3890,7 +3928,7 @@ country_event = { #Minggatu
 }
 
 country_event = { #ye tianshi
-	i = ME_Manchu_Events.64
+	id = ME_Manchu_Events.64
 	title = ME_Manchu_Events.64.t
 	desc = ME_Manchu_Events.64.d
 	picture = COURT_eventPicture
@@ -3934,7 +3972,7 @@ country_event = { #ye tianshi
 			set_country_flag = qng_ranked_lists_flag
 		}
 	}
-}d
+}
 
 country_event = { #High Qing
 	id = ME_Manchu_Events.65
@@ -4553,6 +4591,71 @@ country_event = { #choose regnal title
 		add_ruler_modifier = {
 			name = QNG_era_name_chenghua #accomplished change
 			duration = -1
+		}
+	}
+}
+
+#The Making of Qing Administrative Law
+#
+country_event = { #ministry of rites 3 - consult the huidan
+	id = ME_Manchu_Events.67
+	title = ME_Manchu_Events.67.t
+	desc = ME_Manchu_Events.67.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = reformed_ministry_rites
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			change_variable = {
+				which = reformChainProgress
+				value = 1
+			}
+		}
+	}
+	
+	option = { #a
+		name = ME_Manchu_Events.67.a
+		
+		
+
+		if = {
+			limit = {
+				check_variable = {
+					which = reformChainProgress
+					value = 3
+				}
+			}
+			clr_country_flag = reformed_ministry_rites
+			set_country_flag = finished_rites_event_chain_flag
+			custom_tooltip =  completed_ministry_rites_chain_tooltip
+		}
+	}
+
+	option = { #
+		name = ME_Manchu_Events.67.b
+		
+		
+
+		if = {
+			limit = {
+				check_variable = {
+					which = reformChainProgress
+					value = 3
+				}
+			}
+			clr_country_flag = reformed_ministry_rites
+			set_country_flag = finished_rites_event_chain_flag
+			custom_tooltip =  completed_ministry_rites_chain_tooltip
 		}
 	}
 }
