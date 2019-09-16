@@ -321,20 +321,22 @@ l_english:
  ME_Manchu_Events.60.c: "Have him lead the military bureaucracy."
  
  ME_Manchu_Events.61.t: "Thomas Pereira"
- ME_Manchu_Events.61.d: "ff"
- ME_Manchu_Events.61.a: "ff"
+ ME_Manchu_Events.61.d: "Thomas Pereira was a Jesuit Missionary from Portugal. He stayed came to China to study at a Western-established university in the fields of science and mathematics, but eventually landed a position in the Qing Imperial Court for the remainder of his life. Among his accomplishments are helping neogitate the Treaty of Nerchinsk and managing the Imperial Observatory in the place of the offical director, who was not in China for a time."
+ ME_Manchu_Events.61.a: "Place him amongst the diplomatic corps."
+ ME_Manchu_Events.61.b: "A man with these talents shall not go wasted."
 
  ME_Manchu_Events.62.t: "Johann Schreck"
- ME_Manchu_Events.62.d: "ff"
- ME_Manchu_Events.62.a: "ff"
- 
+ ME_Manchu_Events.62.d: "Schreck studied in institutions throughout Europe, becoming a highly respected academic in medicine and eventually joining the Accademia dei Lincei, an Italian science acadmey. It was during this time in the Academy at Rome that he decided to join the Jesuit order, and recruited by a fellow missionary to conduct a mission to China. The mission was to share the most advanced scientific knowledge with the Chinese; Schreck arrived in China in 1619. He spent some time learning Chinese before travelling to Beijing. There, he incidentally entered in competition to predict the upcoming solar eclipse. The accuracy of his prediciton surpassed the native Chinese astronomers' predictions."
+ ME_Manchu_Events.62.a: "Have him revise the Calendar."
+ ME_Manchu_Events.62.b: "We need a man of medicine."
+
  ME_Manchu_Events.63.t: "Minggatu"
- ME_Manchu_Events.63.d: "ff"
- ME_Manchu_Events.63.a: "ff"
+ ME_Manchu_Events.63.d: "Born Sharvyn Myangat to the Plain White Banner, Minggatu found his place at the Imperial Observatory, in a time when Jesuit Missionaries were the primary directors. He worked there for over three decades, where he compiled and edited three significant astronomical texts. Beyond that, he is also an accomplished mathematician, becoming the first person in China to calculate infinite series and obtain more than then formula, as well as first in the world to invent what would be known as Catalan Numbers."
+ ME_Manchu_Events.63.a: "Ah, yes, of course... Catalan Numbers."
  
  ME_Manchu_Events.64.t: "Ye Tianshi"
- ME_Manchu_Events.64.d: "ff"
- ME_Manchu_Events.64.a: "ff"
+ ME_Manchu_Events.64.d: "The advancements made by the Han scholar, Ye Tianshi are making their rounds in the medival community. His theories on 'warm diseases' characterize the nature and treatment of feverish ailments."
+ ME_Manchu_Events.64.a: "Someone to heal me while i'm sick!"
  
  ME_Manchu_Events.65.t: "Beginning of the High Qing Era"
  ME_Manchu_Events.65.d: "From the wild lands of Manchuria descended a great Khan who fought the armies of the Ming, captured city after city, and usurped the title of the Emperor of China and became the Son of Heaven. From him a great empire rose - the Empire of China of the Qing Dynasty.\nFinally, during the reign of [Root.Monarch.GetTitle] [Root.Monarch.GetName] is the former power and wealth of China restored. The steppe nomads have been pacified, the mountains of Tibet subjugated, the wastelands of Siberia secured, and all fronts have been brought to peace.\nInnovation and arts may now flourish, the people are now settling, and the granaries will overflow with bounty."
@@ -688,6 +690,12 @@ l_english:
  MCH_mongol_horsemen: "Mongol Horsemen"
  desc_MCH_mongol_horsemen: "Gotta go FAST."
  
+ QNG_thomas_observatory: "Expert Director at Imperial Observatory"
+ desc_QNG_thomas_observatory: "The stars look nice."
+ 
+ QNG_schreck: "Johann Schreck, Court Physician"
+ desc_QNG_schreck: "We'll never get sick now!"
+
  #decisions
  QNG_great_clearance_title: "The Great Clearance"
  QNG_great_clearance_desc: "Ming Loyalists still occupy our lands. They have concentrated on the coastal areas and find support by pirates and fellow loyalists who have taken up piracy. If we were to force the populace inland and wrest control of the coast, then we may be able to squash any brewing rebellions before they happen."

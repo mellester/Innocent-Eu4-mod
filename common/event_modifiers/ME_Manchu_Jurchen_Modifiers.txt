@@ -531,3 +531,10 @@ QNG_era_name_zhengde = {
 QNG_era_name_chenghua = {
 	yearly_corruption = -0.1
 }
+QNG_thomas_observatory = {
+	local_institution_spread = 0.15
+}
+
+QNG_schreck = {
+	technology_cost = -0.05
+}
