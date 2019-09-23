@@ -326,21 +326,21 @@ l_english:
  ME_Manchu_Events.60.b: "Perhaps he should stay a man of the army."
  ME_Manchu_Events.60.c: "Have him lead the military bureaucracy."
  
- ME_Manchu_Events.61.t: "Thomas Pereira"
+ ME_Manchu_Events.61.t: "Thomas Pereira, Jesuit Astronomer"
  ME_Manchu_Events.61.d: "Thomas Pereira was a Jesuit Missionary from Portugal. He stayed came to China to study at a Western-established university in the fields of science and mathematics, but eventually landed a position in the Qing Imperial Court for the remainder of his life. Among his accomplishments are helping neogitate the Treaty of Nerchinsk and managing the Imperial Observatory in the place of the offical director, who was not in China for a time."
  ME_Manchu_Events.61.a: "Place him amongst the diplomatic corps."
  ME_Manchu_Events.61.b: "A man with these talents shall not go wasted."
 
- ME_Manchu_Events.62.t: "Johann Schreck"
+ ME_Manchu_Events.62.t: "Johann Schreck, Jesuit Astronomer"
  ME_Manchu_Events.62.d: "Schreck studied in institutions throughout Europe, becoming a highly respected academic in medicine and eventually joining the Accademia dei Lincei, an Italian science acadmey. It was during this time in the Academy at Rome that he decided to join the Jesuit order, and recruited by a fellow missionary to conduct a mission to China. The mission was to share the most advanced scientific knowledge with the Chinese; Schreck arrived in China in 1619. He spent some time learning Chinese before travelling to Beijing. There, he incidentally entered in competition to predict the upcoming solar eclipse. The accuracy of his prediciton surpassed the native Chinese astronomers' predictions."
  ME_Manchu_Events.62.a: "Have him revise the Calendar."
  ME_Manchu_Events.62.b: "We need a man of medicine."
 
- ME_Manchu_Events.63.t: "Minggatu"
+ ME_Manchu_Events.63.t: "Minggatu, Mongol Mathematician"
  ME_Manchu_Events.63.d: "Born Sharvyn Myangat to the Plain White Banner, Minggatu found his place at the Imperial Observatory, in a time when Jesuit Missionaries were the primary directors. He worked there for over three decades, where he compiled and edited three significant astronomical texts. Beyond that, he is also an accomplished mathematician, becoming the first person in China to calculate infinite series and obtain more than then formula, as well as first in the world to invent what would be known as Catalan Numbers."
  ME_Manchu_Events.63.a: "Ah, yes, of course... Catalan Numbers."
  
- ME_Manchu_Events.64.t: "Ye Tianshi"
+ ME_Manchu_Events.64.t: "Ye Tianshi, Physician"
  ME_Manchu_Events.64.d: "The advancements made by the Han scholar, Ye Tianshi are making their rounds in the medival community. His theories on 'warm diseases' characterize the nature and treatment of feverish ailments."
  ME_Manchu_Events.64.a: "Someone to heal me while i'm sick!"
  
