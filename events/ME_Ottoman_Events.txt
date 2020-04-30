@@ -27,7 +27,6 @@ country_event = { #Return of the Sultan
 			shock = 5
 			manuever = 5
 			siege = 2
-			age = 39
 		}
 	}
 	
@@ -325,6 +324,13 @@ country_event = { #annexation of the mamluks
 			is_in_war = {
 				attacker_leader = ROOT
 				defender_leader = THIS
+			}
+		}
+		#Balance for MP is unsure
+		NOT = {
+			any_country = {
+				NOT = { tag = TUR }
+				was_player = yes
 			}
 		}
 		war_score_against = {
@@ -770,9 +776,20 @@ country_event = { #conquest of Jerusalem
 	option = { #expel the dhimmi
 		name = ME_Ottoman_Events.12.b
 		ai_chance  = { factor = 0 }
-		add_estate_loyalty = {
-			estate = estate_dhimmi
-			loyalty = -15
+		if = {
+			limit = {
+				has_dlc = "The Cossacks"
+			}
+			add_estate_loyalty = {
+				estate = estate_dhimmi
+				loyalty = -15
+			}
+		}
+		else = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -15
+			}		
 		}
 		379 = {
 			add_base_tax = -1
@@ -2500,7 +2517,10 @@ country_event = { #failure to complete persia
 						casus_belli = cb_humiliate
 					}
 				}
-				has_country_flag = TUR_opt_in_persia
+				has_country_flag = {
+					flag = TUR_opt_in_persia
+					days = 40
+				}
 			}
 		}
 	}

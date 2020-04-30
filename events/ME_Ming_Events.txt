@@ -148,6 +148,7 @@ country_event = {
 	trigger = {
 		is_at_war = no
 		mission_completed = MNG_question_of_guidence
+		NOT = { exists = JNG }
 	}
 	
 	option = {
@@ -261,7 +262,14 @@ country_event = {
 		
 		ai_chance = { factor = 0.33 }
 		highlight = yes
-		
+		trigger = {
+			NOT = {
+				any_country = {
+					NOT = { tag = ROOT }
+					was_player = yes
+				}
+			}
+		]
 		set_country_flag = ME_MNG_HEADLESS_EMPIRE
 		swap_non_generic_missions = yes
 		custom_tooltip = SUPPORT_JINGTAI_IN_HIS_REBELLION
@@ -525,6 +533,10 @@ country_event = {
 	
 	trigger = {
 		tag = JNG
+		war_with = MNG
+		MNG = {
+			mission_completed = MNG_question_of_guidence
+		}
 	}
 	
 	mean_time_to_happen = {

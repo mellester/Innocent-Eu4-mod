@@ -76,9 +76,9 @@ country_event = {    #Mission Event - Rule Restored over Syria
     major = yes
     is_triggered_only = yes
 
-    mean_time_to_happen = {
-		months = 1
-    }
+    # mean_time_to_happen = {
+		# months = 1
+    # }
 
 	option = {
 		name = ME_Ayyubid_Events.3.a
@@ -121,9 +121,9 @@ country_event = {    #Mission Event - Rule Restored over Palestine
 	major = yes
 	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.4.a
@@ -145,9 +145,9 @@ country_event = {    #Mission Event - Rule Restored over Egypt
 	major = yes
 	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.5.a
@@ -196,9 +196,9 @@ country_event = {    #Mission Event - Status of the Sharifate
 	major = yes
 	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
         name = ME_Ayyubid_Events.6.a
@@ -380,9 +380,9 @@ country_event = {    #Mission Event - Northern Defenses
       
 	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.10.a
@@ -451,9 +451,9 @@ country_event = {    #Mission Event - Restoration of Al-Firdaws Madrasa
       
 	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.11.a
@@ -545,9 +545,9 @@ country_event = {    #Mission Event - Tomb of Saladin
       
 	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.13.a
@@ -578,24 +578,17 @@ country_event = {    #Decision Event - The Ayyubid Caliphate
       
 	is_triggered_only = yes
 	major = yes
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.14.a
 
 		ai_chance = { factor = 100 }
-
-		if = {
-			limit = {
-				has_dlc = "Dharma"
-			}
-			add_government_reform = caliphate_reform_sunni 
-		}
-		else = {
-			set_legacy_government = caliphate_sunni_legacy 
-		}
+		
+		change_government = monarchy
+		add_government_reform = caliphate_reform_sunni 
 		custom_tooltip = ME_Ayyubid_Tooltips.12
 	}
 
@@ -608,9 +601,9 @@ country_event = {    #Mission Event - End of Crusader Age
       
 	is_triggered_only = yes
 	major = yes
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.15.a
@@ -631,9 +624,9 @@ country_event = {    #Mission Event - Mokha Coffee
       
 	is_triggered_only = yes
 	major = yes
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.16.a
@@ -662,9 +655,9 @@ country_event = {    #New Ayyubid Ideas
       
 	is_triggered_only = yes
 	major = yes
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.17.a
@@ -688,9 +681,9 @@ country_event = {    #Mission Event - Permanent Piety
       
 	is_triggered_only = yes
 	major = yes
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.18.a
@@ -829,9 +822,9 @@ country_event = {    #Ayyubid Capital
       
 	is_triggered_only = yes
 	major = yes
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
 	option = {
 		name = ME_Ayyubid_Events.22.a #Cairo

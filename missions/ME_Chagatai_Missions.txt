@@ -185,7 +185,7 @@ CHG_missions_2 = {
         trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
-				culture = kazani
+				culture = khazak
 			}
 		}
         effect = {
@@ -411,7 +411,7 @@ CHG_missions_4 = {
 						OR = {
 							reverse_has_opinion = {
 								who = MNG
-								amount = 75
+								value = 75
 							}
 							army_size = MNG
 							MNG = { 
