@@ -144,3 +144,103 @@ country_event = { #An oath kept
 		add_stability = 1
 	}
 }
+
+country_event = { #Mazandarani Power Struggle
+	id = ME_TAB.7
+	title = ME_TAB.7.t 
+	desc = ME_TAB.7.d 
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { #Zoroastrian Persia is a relic of the past. We are Muslim.
+		name = ME_TAB.7.a
+
+		add_stability = 1
+		add_country_modifier = {
+			name = maz_resolute_faith
+			duration = 7300
+		}
+		set_country_flag = mazandaran_islam
+		swap_non_generic_missions = yes
+	}
+
+	option = { #The great empires of Persia were Zoroastrian. Glory awaits!
+		name = ME_TAB.7.b
+
+		add_stability = -2
+		change_religion = zoroastrian
+		if = {
+			limit = {
+				owns = 426
+			}
+			426 = {
+				change_religion = zoroastrian
+			}
+		}
+		else = {
+			capital = {
+				change_religion = zoroastrian
+			}
+		}
+		define_ruler = {
+			name = "Kayumarth"
+			dynasty = "Paduspanid"
+			age = 45
+			claim = 95
+			culture = mazandarani
+			religion = zoroastrian
+		}
+		define_heir = {
+			name = "Kayumarth"
+			dynasty = "Paduspanid"
+			adm = 3
+			dip = 3
+			mil = 3
+			age = 20
+			claim = 95
+			culture = mazandarani
+			religion = zoroastrian
+		}
+		set_country_flag = mazandaran_zoroastrian
+		swap_non_generic_missions = yes
+	}
+}
+
+country_event = { #Reforming the Bureaucracy
+	id = ME_TAB.8
+	title = ME_TAB.8.t
+	desc = ME_TAB.8.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		#Change Tier 1 government reform to Shahdom (-0.05 global autonomy, +5 states, -25% state maintenance)
+	}
+	
+	option = { #
+		name = ME_TAB.8.a
+		
+		add_country_modifier = {
+			name = maz_innovative_focus
+			duration = -1
+		}
+	}
+
+	option = { #
+		name = ME_TAB.8.b
+		add_country_modifier = {
+			name = maz_military_focus
+			duration = -1
+		}
+	}
+
+	option = { #
+		name = ME_TAB.8.c
+		add_country_modifier = {
+			name = maz_production_focus
+			duration = -1
+		}
+	}
+}

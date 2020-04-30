@@ -41,7 +41,6 @@ cpm_missions_1 = {
 		OR = {
 			tag = BPI
 			tag = KRY
-			tag = TAB
 		}
 	}
 	has_country_shield = yes
@@ -70,7 +69,6 @@ cpm_missions_2 = {
 		OR = {
 			tag = BPI
 			tag = KRY
-			tag = TAB
 		}
 	}
 	has_country_shield = yes
@@ -141,7 +139,6 @@ cpm_missions_3 = {
 		OR = {
 			tag = BPI
 			tag = KRY
-			tag = TAB
 		}
 	}
 	has_country_shield = yes
@@ -216,7 +213,6 @@ cpm_missions_4 = {
 		OR = {
 			tag = BPI
 			tag = KRY
-			tag = TAB
 		}
 	}
 	has_country_shield = yes
@@ -364,7 +360,6 @@ cpm_missions_5 = {
 		OR = {
 			tag = BPI
 			tag = KRY
-			tag = TAB
 		}
 	}
 	has_country_shield = yes
