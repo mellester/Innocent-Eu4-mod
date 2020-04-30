@@ -1,9 +1,9 @@
 ﻿l_english:
- 
+
  #Form Mazandaran
  form_mazandaran_nation_title: "Unite the Caspian Kingdoms"
  form_mazandaran_nation_desc: "The Caspian coast is dotted with tiny, irrelevant kingdoms, on the verge of succumbing to an invasion at any time by a motivated power. All of because of petty dynastic quarrels. The feuding must end if we are to remain independent, and Mazandaran must be reunited."
- 
+
  #Generic Caspian Minor Missions
  cpm_ally_ardabil_title: "Relations with the Safavids"
  cpm_ally_ardabil_desc: "Our long term ally has always been the Safaviyya Order of Ardabil. We must nurture this relationship, so that we may reap the benefits when we have sufficiently expanded!"
@@ -80,7 +80,7 @@
  maz_indian_parsi_community_title: "Indian Parsi Communities"
  maz_indian_parsi_community_desc: "With the Gulf Coast under our control, we have a route to India, and direct contact with the Parsis in Gujarat. Distant from Amol itself, the Gujarati Persians are still brothers in culture and faith and we should extend open arms to them."
 
- 
+
  #Generic Caspian Minor Modifiers
  cpm_mountain_warriors: "Mountain Warriors"
  cpm_allies_modifier: "Secured Alliances"
@@ -95,7 +95,7 @@
  kry_support_opinion: "Ardabili Support"
  kry_scumbags: "Traitorous Safavids"
  tab_sneaky_shits: "Safavid Snakes!"
- 
+
  #Mazandaran Modifiers
  maz_caspian_ports: "Caspian Ports"
  maz_silk_dominance: "Silk Road Dominance"
@@ -104,7 +104,6 @@
  maz_diamond_persia: "Diamond of Persia"
  maz_end_timurid_legacy_moh: "End of Timurid Legacy"
  maz_end_timurid_legacy: "End of Timurid Legacy"
- maz_reintegration_crown_lands: "Reintegration into Crown Lands"
  maz_persian_resurgence: "Persian Resurgence"
  maz_patronizing_arts: "Patronizing the Arts"
  maz_stronghold_west: "Stronghold of the West"
@@ -128,35 +127,35 @@
  maz_production_focus: "Production Focus"
 
  #Gilan/Ardabil Events
- ME_TAB.1.t: "A Request From Gilan"
- ME_TAB.1.d: "The Sultan of Gilan has sent an envoy to our court requesting our allegiance when he has conquered all of the Caspian coast. While we deem this highly unlikely, the Safavid order does have strong ties with the court of Gilan, and should they become strong it wouldn't be the worst fate to fight alongside them."
- ME_TAB.1.a: "We will support the Sultan of Gilan however necessary."
- ME_TAB.1.b: "And risk our independence? As if!"
- ME_TAB.2.t: "Ardabil Aligns With Us"
- ME_TAB.2.d: "Our envoy has returned, bearing great news! The Sultan of Ardabil has declared his support for us, and is willing to serve in our court if we manage to conquer the surrounding pretenders."
- ME_TAB.2.a: "Great!"
- ME_TAB.3.t: "Ardabil Refuses to Support Us"
- ME_TAB.3.d: "Our envoy has returned, bearing unfortunate news. The Sultan of Ardabil claims his ambitions outweigh our own, and that he refuses to serve in any court except his own."
- ME_TAB.3.a: "So much for friendship."
- ME_TAB.4.t: "The Promise to Gilan"
- ME_TAB.4.d: "Despite what the advisors have suggested, the Sultan of Gilan has actually managed to consolidate Tabarestan for himself. This presents us with a predicament: fulfill our promise to the Sultan and give up our independence, or become the most dishonorable Sultan in Persia. Either way, we should have intervened a long time ago."
- ME_TAB.4.a: "We have no choice but to keep our word."
- ME_TAB.4.b: "A bad reputation today secures an independent Ardabil tomorrow."
- ME_TAB.5.t: "A Broken Oath"
- ME_TAB.5.d: "The Safavids have blatantly disregarded the oath they gave us those many years ago, that they would join us once we united Mazandaran. This is an act of treachery, and must be acted upon as such."
- ME_TAB.5.a: "If the Sultan will not be our knight, he will be our pawn."
- ME_TAB.6.t: "A Promise Fulfilled"
- ME_TAB.6.d: "The Sultan of Ardabil has remembered his promise to us and has sworn his allegiance. With all the pieces falling in place, our proper title as Shah is only years away from returning to us."
- ME_TAB.6.a: "Great news!"
- me_tab_promise_to_gilan_tt: "By choosing this option we are making a promise to become a vassal of Gilan once they form Mazandaran. If we break this promise, the Sultan will retaliate!"
- 
- ME_TAB.7.t: "Mazandarani Power Struggle"
- ME_TAB.7.d: "For decades, Mazandarani politics has been marked by the game of tug of war between the Muslim Marashi dynasty and Zoroastrian Paduspanid dynasty. With all of Mazandaran under our control, the rivalry is fiercer than ever before, and it is clear to everyone that there is no option other than to pick sides."
- ME_TAB.7.a: "Zoroastrian Persia is a relic of the past. We are Muslim."
- ME_TAB.7.b: "The great empires of Persia were Zoroastrian. Glory awaits!"
+ ME_Mazandaran_Events.1.t: "A Request From [From.GetName]"
+ ME_Mazandaran_Events.1.d: "The Sultan of [From.GetName] has sent an envoy to our court requesting our allegiance when he has conquered all of the Caspian coast. While we deem this highly unlikely, the Safavid order does have strong ties with the court of Gilan, and should they become strong it wouldn't be the worst fate to fight alongside them."
+ ME_Mazandaran_Events.1.a: "We will support the Sultan of [From.GetName] however necessary."
+ ME_Mazandaran_Events.1.b: "And risk our independence? As if!"
+ ME_Mazandaran_Events.2.t: "Ardabil Aligns With Us"
+ ME_Mazandaran_Events.2.d: "Our envoy has returned, bearing great news! The Sultan of Ardabil has declared his support for us, and is willing to serve in our court if we manage to conquer the surrounding pretenders."
+ ME_Mazandaran_Events.2.a: "Great!"
+ ME_Mazandaran_Events.3.t: "Ardabil Refuses to Support Us"
+ ME_Mazandaran_Events.3.d: "Our envoy has returned, bearing unfortunate news. The Sultan of Ardabil claims his ambitions outweigh our own, and that he refuses to serve in any court except his own."
+ ME_Mazandaran_Events.3.a: "So much for friendship."
+ ME_Mazandaran_Events.4.t: "The Promise to Gilan"
+ ME_Mazandaran_Events.4.d: "Despite what the advisors have suggested, the Sultan of Gilan has actually managed to consolidate Tabarestan for himself. This presents us with a predicament: fulfill our promise to the Sultan and give up our independence, or become the most dishonorable Sultan in Persia. Either way, we should have intervened a long time ago."
+ ME_Mazandaran_Events.4.a: "We have no choice but to keep our word."
+ ME_Mazandaran_Events.4.b: "A bad reputation today secures an independent Ardabil tomorrow."
+ ME_Mazandaran_Events.5.t: "A Broken Oath"
+ ME_Mazandaran_Events.5.d: "The Safavids have blatantly disregarded the oath they gave us those many years ago, that they would join us once we united Mazandaran. This is an act of treachery, and must be acted upon as such."
+ ME_Mazandaran_Events.5.a: "If the Sultan will not be our knight, he will be our pawn."
+ ME_Mazandaran_Events.6.t: "A Promise Fulfilled"
+ ME_Mazandaran_Events.6.d: "The Sultan of Ardabil has remembered his promise to us and has sworn his allegiance. With all the pieces falling in place, our proper title as Shah is only years away from returning to us."
+ ME_Mazandaran_Events.6.a: "Great news!"
+ me_tab_promise_to_gilan_tt: "By choosing this option we are making a promise to become a vassal of §Y[From.GetName]§! once they form §Y[TAB.GetName]§!. If we break this promise, the [From.Monarch.GetTitle] will retaliate!"
 
- ME_TAB.8.t: "Reforming the Bureaucracy"
- ME_TAB.8.d: "Persia has long been ruled under a mix of Persian and Muslim administration, but for a Zoroastrian state, Muslim elements are simply unnecessary. Now is the time to throw off the shackles of Sharia Law and develop a new system of bureaucracy. However, there are many ways to go about it, but the members of court have made it clear that only one area can be focused on."
- ME_TAB.8.a: "Innovation is the key to a thriving government."
- ME_TAB.8.b: "The military is our driving force, it deserves our focus."
- ME_TAB.8.c: "Our success rests on our material goods, focus on developing the land.""
+ ME_Mazandaran_Events.7.t: "Mazandarani Power Struggle"
+ ME_Mazandaran_Events.7.d: "For decades, Mazandarani politics has been marked by the game of tug of war between the Muslim Marashi dynasty and Zoroastrian Paduspanid dynasty. With all of Mazandaran under our control, the rivalry is fiercer than ever before, and it is clear to everyone that there is no option other than to pick sides."
+ ME_Mazandaran_Events.7.a: "Zoroastrian Persia is a relic of the past. We are Muslim."
+ ME_Mazandaran_Events.7.b: "The great empires of Persia were Zoroastrian. Glory awaits!"
+
+ ME_Mazandaran_Events.8.t: "Reforming the Bureaucracy"
+ ME_Mazandaran_Events.8.d: "Persia has long been ruled under a mix of Persian and Muslim administration, but for a Zoroastrian state, Muslim elements are simply unnecessary. Now is the time to throw off the shackles of Sharia Law and develop a new system of bureaucracy. However, there are many ways to go about it, but the members of court have made it clear that only one area can be focused on."
+ ME_Mazandaran_Events.8.a: "Innovation is the key to a thriving government."
+ ME_Mazandaran_Events.8.b: "The military is our driving force, it deserves our focus."
+ ME_Mazandaran_Events.8.c: "Our success rests on our material goods, focus on developing the land.""

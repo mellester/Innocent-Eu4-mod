@@ -28,9 +28,6 @@ maz_campaign_order = {
 	manpower_recovery_speed = 0.10
 	siege_ability = 0.05
 }
-maz_reintegration_crown_lands = {
-	local_autonomy = -0.05
-}
 maz_persian_resurgence = {
 	num_accepted_cultures = 1
 }
