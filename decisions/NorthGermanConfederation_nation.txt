@@ -5,6 +5,7 @@ country_decisions = {
 			OR = {
 				tag = BRA
 				tag = PRU
+				has_country_flag = can_form_NGC
 			}
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_north_german_federation_flag }
@@ -31,6 +32,7 @@ country_decisions = {
 				AND = {
 					region = north_german_region
 					NOT = { area = bohemia_area }
+					NOT = { area = erzgebirge_area }
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				AND = {
@@ -64,6 +66,7 @@ country_decisions = {
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT
 					area = bohemia_area
+					area = erzgebirge_area
 				}
 			}
 		}

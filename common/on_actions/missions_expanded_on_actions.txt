@@ -22,6 +22,20 @@ on_startup = {
 	SWE = {
 		set_variable = { swe_num_of_wars_against_non_catholics = 0 }
 	}
+	if = {
+		limit = {
+			exists = AVR
+		}
+		AVR = {
+			country_event = { id = ME_Avaria_Events.1 }
+		}
+	}
+	if = {
+		limit = {
+			tag = TKD
+		}
+		change_variable = { which = num_of_won_battles value = 0 }
+	}
 }
 
 on_monarch_death = {
@@ -35,6 +49,14 @@ on_monarch_death = {
 		BRA = {
 			clr_country_flag = albrecht_achilles_flag #Just to be sure
 			kill_heir = yes #If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
+		}
+	}
+	if = {
+		limit = {
+			has_ruler_flag = Ulugh_beg_is_ruler
+		}
+		ROOT = {
+			country_event = { id = ME_Timurid_Princes_Event.11 }
 		}
 	}
 	events = {
@@ -59,6 +81,17 @@ on_monarch_death = {
 		}
 		set_country_flag = ME_FFS_STAP
 		country_event = { id = ME_Zapadoslavia_Events.9 }
+	}
+	if = {
+		limit = {
+			tag = ERE
+			mission_completed = ERE_tombs
+		}
+		random_owned_province = {
+			province_event = {
+				id = ME_Beylik_Events.14
+			}
+		}
 	}
 }
 
@@ -282,6 +315,12 @@ on_flagship_captured = {
 			}
 			remove_country_modifier = netherlands_holland_dutch_naval_pride_modifier
 		}
+		if = {
+			limit = {
+				has_country_modifier = japan_a_fleets_pride_modifier
+			}
+			remove_country_modifier = japan_a_fleets_pride_modifier
+		}
 	}
 }
 
@@ -302,6 +341,12 @@ on_flagship_destroyed = {
 			}
 			remove_country_modifier = netherlands_holland_dutch_naval_pride_modifier
 		}
+		if = {
+			limit = {
+				has_country_modifier = japan_a_fleets_pride_modifier
+			}
+			remove_country_modifier = japan_a_fleets_pride_modifier
+		}
 	}
 }
 
@@ -315,6 +360,12 @@ on_battle_won_country = {
 			}
 		}
 		country_event = { id = ME_Ilkhanate_Events.8 }
+	}
+	if = {
+		limit = {
+			mission_completed = takeda_rise_of_takeda_shingen
+		}
+		change_variable = { which = num_of_won_battles value = 1 }
 	}
 }
 
