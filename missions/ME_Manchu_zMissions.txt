@@ -382,7 +382,7 @@ qing_missions_1 = {
 	}
 	
 	QNG_japan_diplomacy = {
-		icon = me_mission_manchu_warrior
+		icon = me_mission_manchu_mounted_soldier_2
 		required_missions = {
 			QNG_conquest_of_korea
 			QNG_seaban_lift
@@ -776,7 +776,7 @@ qing_missions_2 = {
 	}
 	
 	QNG_navy = {
-		icon = me_mission_manchu_warrior
+		icon = me_mission_manchu_mounted_soldier
 		required_missions = { abolish_the_mandate_of_heaven }
 		position = 11
 		trigger = {
@@ -801,7 +801,7 @@ qing_missions_2 = {
 	}
 	
 	QNG_taiwan = {
-		icon = me_mission_manchu_warrior
+		icon = me_mission_manchu_mounted_soldier_2
 		required_missions = { QNG_navy }
 		provinces_to_highlight = {
 			area = taiwan_area
@@ -879,7 +879,7 @@ qing_missions_2 = {
 	}
 	
 	QNG_tea = {
-		icon = me_mission_manchu_warrior
+		icon = me_mission_manchu_mounted_soldier_2
 		required_missions = { QNG_seaban_lift }
 		position = 14
 		trigger = {
@@ -901,7 +901,7 @@ qing_missions_2 = {
 	}
 	
 	QNG_opium = {
-		icon = me_mission_manchu_warrior
+		icon = me_mission_manchu_mounted_soldier_2
 		required_missions = { QNG_tea }
 		position = 15
 		trigger = {
