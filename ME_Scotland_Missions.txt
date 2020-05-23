@@ -1,0 +1,971 @@
+scotland_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCO
+		#has_country_flag = use_missions_expanded_missions_instead_of_paradox
+	}
+	has_country_shield = yes
+
+    sco_tame_the_earls = {
+        icon = mission_rb_conquer_ireland
+        position = 2
+        required_missions = { sco_raise_the_warrior_clans }
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = connacht_area
+				area = leinster_area
+				area = munster_area
+			}
+			NOT = { owned_by = ROOT }
+			NOT = {
+				ulster_area = {
+					owned_by = ROOT
+				}
+			}
+			NOT = {
+				connacht_area = {
+					owned_by = ROOT
+				}
+			}
+			NOT = {
+				leinster_area = {
+					owned_by = ROOT
+				}
+			}
+			NOT = {
+				munster_area = {
+					owned_by = ROOT
+				}
+			}
+			NOT = {
+				any_country = {
+					primary_culture = irish
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
+					}
+				}
+			}
+		}
+        trigger = {
+			OR = {
+				stability = 1
+				army_size = 20
+			}
+            OR = {
+                any_country = {
+                    primary_culture = irish
+                    has_opinion_modifier = {
+                        who = ROOT
+                        modifier = insulted
+                    }
+                }
+				ulster_area = {
+					owned_by = ROOT
+				}
+				connacht_area = {
+					owned_by = ROOT
+				}
+				leinster_area = {
+					owned_by = ROOT
+				}
+				munster_area = {
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+                name = sco_gaelic_wars
+				duration = 5475
+			}
+			connacht_area = {
+				limit = {
+                    NOT = { owned_by = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+			}
+			leinster_area = {
+				limit = {
+                    NOT = { owned_by = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+			}
+			munster_area = {
+				limit = {
+                    NOT = { owned_by = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+			}
+			ulster_area = {
+				limit = {
+                    NOT = { owned_by = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	sco_earldom_of_ulster = {
+		icon = mission_rb_conquer_ulster
+		position = 3
+        provinces_to_highlight = {
+            area = ulster_area
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+		required_missions = { sco_tame_the_earls }
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 15
+			}
+		}
+	}
+
+	lord_of_ireland = {
+		icon = mission_rb_import_potatoes
+		position = 4
+		required_missions = { sco_earldom_of_ulster }
+        provinces_to_highlight = {
+            OR = {
+                area = ulster_area
+                area = munster_area
+                area = connacht_area
+                area = leinster_area
+            }
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			munster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 150
+			connacht_area = {
+				add_province_modifier = {
+					name = sco_prosperous_potato_harvests
+					duration = 9125
+				}
+			}
+			leinster_area = {
+				add_province_modifier = {
+					name = sco_prosperous_potato_harvests
+					duration = 9125
+				}
+			}
+			munster_area = {
+				add_province_modifier = {
+					name = sco_prosperous_potato_harvests
+					duration = 9125
+				}
+			}
+			ulster_area = {
+				add_province_modifier = {
+					name = sco_prosperous_potato_harvests
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	sco_scottish_industry = {
+		icon = mission_have_manufactories
+		position = 6
+		required_missions = { lord_of_ireland }
+		trigger = {
+			num_of_owned_manufactory_combined_trigger = { amount = 15 }
+			num_of_owned_provinces_with = {
+				value = 3
+				trade_goods = cloth
+				base_production = 10
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = SCO_SCOTTISH_INDUSTRY
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_manufactory_trigger = yes
+					}
+					add_province_modifier = {
+						name = sco_protoindustrialization
+						duration = 5475
+					}
+				}
+			}
+		}
+	}
+
+	sco_the_fires_of_production = {
+		icon = mission_rb_build_furnaces
+		position = 8
+		required_missions = { sco_scottish_industry }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 241
+				province_id = 1861
+				province_id = 4375
+				province_id = 246
+				province_id = 249
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { has_manufactory_trigger = yes }
+				NOT = { base_production = 10 }
+			}
+		}
+		trigger = {
+			owns_core_province = 241
+			241 = {
+				has_manufactory_trigger = yes
+				base_production = 10
+			}
+			owns_core_province = 1861
+			1861 = {
+				has_manufactory_trigger = yes
+				base_production = 10
+			}
+			owns_core_province = 4375
+			4375 = {
+				has_manufactory_trigger = yes
+				base_production = 10
+			}
+			owns_core_province = 246
+			246 = {
+				has_manufactory_trigger = yes
+				base_production = 10
+			}
+			owns_core_province = 249
+			249 = {
+				has_manufactory_trigger = yes
+				base_production = 10
+			}
+		}
+		effect = { #Messed up one of the triggers, see drawio
+			custom_tooltip = SCO_FIRES_OF_INDUSTRY
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_manufactory_trigger = yes
+					}
+					if = {
+						limit = {
+							has_province_modifier = sco_protoindustrialization
+						}
+						remove_province_modifier = sco_protoindustrialization
+					}
+					add_province_modifier = {
+						name = sco_increased_production_quotas
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	sco_the_royal_scots_navy = {
+		icon = mission_rb_grow_the_channel
+		position = 9
+		required_missions = { }
+		trigger = {
+			navy_size_percentage = 1
+			OR = {
+				advisor = naval_reformer
+				has_idea = modernised_royal_scots_navy
+			}
+		}
+		effect = {
+			add_navy_tradition = 20
+			if = {
+				limit = {
+					has_dlc = "Golden Century"
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							has_port = yes
+						}
+					}
+					capital_scope = {
+						create_flagship = {
+							name = "Great Michael"
+							type = heavy_ship
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						any_owned_province = {
+							has_port = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							has_port = yes
+						}
+						create_flagship = {
+							name = "Great Michael"
+							type = heavy_ship
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						capital_scope = {
+							has_port = yes
+						}
+					}
+					capital_scope = {
+						add_unit_construction = {
+							type = heavy_ship
+							amount = 2
+							speed = 0.25
+							cost = 0
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						any_owned_province = {
+							has_port = yes
+						}
+					}
+					random_owned_province = {
+						limit = {
+							has_port = yes
+						}
+						add_unit_construction = {
+							type = heavy_ship
+							amount = 2
+							speed = 0.25
+							cost = 0
+						}
+					}
+				}
+			}
+		}
+	}
+
+	sco_the_north_sea = {
+		icon = mission_rb_scottish_north_sea_trade
+		position = 10
+		required_missions = { sco_the_royal_scots_navy }
+		trigger = {
+			OR = {
+				marketplace = 5
+				trade_depot = 5
+				stock_exchange = 5
+			}
+            1975 = {
+                trade_share = {
+                    share = 51
+                    country = ROOT
+                }
+            }
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = sco_royal_mercantile_seal
+				duration = 7300
+			}
+		}
+	}
+
+    sco_nova_scotia = {
+        icon = mission_rb_nova_scotia
+        position = 11
+        required_missions = { sco_the_north_sea }
+        trigger = {
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 5
+                colonial_region = colonial_canada
+            }
+        }
+        effect = {
+			country_event = { id = ME_Scotland_Events.1 }
+            add_country_modifier = {
+                name = sco_scottish_vacation
+                duration = 7300
+            }
+        }
+    }
+}
+
+scotland_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCO
+		#has_country_flag = use_missions_expanded_missions_instead_of_paradox
+	}
+	has_country_shield = yes
+
+	sco_clans_of_ireland = {
+		icon = mission_rb_into_ireland
+		position = 3
+		required_missions = { sco_tame_the_earls }
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			ROOT = {
+				NOT = {
+					calc_true_if = {
+						ulster_area = {
+							type = all
+							owned_by = ROOT
+						}
+						munster_area = {
+							type = all
+							owned_by = ROOT
+						}
+						connacht_area = {
+							type = all
+							owned_by = ROOT
+						}
+						leinster_area = {
+							type = all
+							owned_by = ROOT
+						}
+						amount = 2
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 70
+				}
+				accepted_culture = irish
+			}
+			calc_true_if = {
+				ulster_area = {
+					type = all
+					owned_by = ROOT
+				}
+				munster_area = {
+					type = all
+					owned_by = ROOT
+				}
+				connacht_area = {
+					type = all
+					owned_by = ROOT
+				}
+				leinster_area = {
+					type = all
+					owned_by = ROOT
+				}
+				amount = 2
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 70
+					}
+				}
+				add_country_modifier = {
+					name = sco_clan_cooperation
+					duration = 7300
+				}
+			}
+			else = {
+				add_yearly_manpower = 1
+				define_advisor = {
+					name = "Shane O'Neil"
+					type = army_reformer
+					skill = 2
+					cost_multiplier = 0.50
+				}
+			}
+		}
+	}
+
+	sco_the_channel_coast = {
+		icon = mission_rb_monopolize_the_channel
+		position = 5
+		required_missions = { sco_eradicate_the_marcher_lords }
+		provinces_to_highlight = {
+			area = wessex_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				wessex_area = {
+					limit = {
+						is_state = yes
+					}
+					add_prosperity = 100
+				}
+			}
+			else = {
+				add_adm_power = 100
+			}
+			wessex_area = {
+				add_base_tax = 1
+				add_devastation = -25
+			}
+		}
+	}
+
+	sco_secure_holland = {
+		icon = mission_rb_hanseatic_east
+		position = 7
+		required_missions = { sco_nemo_impuna_lacessit }
+		provinces_to_highlight = {
+			area = holland_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			holland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				1269 = {
+					trade_share = {
+						share = 65
+						country = ROOT	
+					}
+				}
+			}
+		}			
+		effect = {
+			add_country_modifier = {
+				name = sco_domination_of_the_channel
+				duration = 7300
+			}
+		}
+	}
+
+	sco_maritime_trade = { 
+		icon = mission_aragonese_navy
+		position = 10
+		required_missions = { sco_the_royal_scots_navy }
+		trigger = {
+			OR = {
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					estate_influence = {
+						estate = estate_burghers
+						influence = 75
+					}
+					num_of_owned_provinces_with = {
+						value = 2
+						province_has_center_of_trade_of_level = 1
+						has_estate = estate_burghers
+					}
+				}
+			
+				AND = {
+					num_of_light_ship = 10
+					num_of_admirals = 1
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					num_of_light_ship = 10
+					num_of_admirals = 1
+				}
+				add_country_modifier = {
+					name = sco_kings_mercantile_navy
+					duration = 7300
+				}
+			}
+			else = {
+				every_owned_province = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					add_province_modifier = {
+						name = sco_scottish_mercantilism_tactics
+						duration = 7300
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 15
+				}
+			}
+		}
+	}
+
+	sco_the_education_acts = {
+		icon = mission_rb_the_education_acts
+		position = 12
+		required_missions = { sco_maritime_trade sco_scottish_renaissance }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+}
+
+scotland_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCO
+		#has_country_flag = use_missions_expanded_missions_instead_of_paradox
+	}
+	has_country_shield = yes
+
+	sco_raise_the_warrior_clans = {
+		icon = mission_rb_conquer_the_highlands
+		position = 1
+		required_missions = { }
+		trigger = {
+			OR = {
+				advisor = army_reformer
+				OR = {
+					AND = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 65
+						}
+						estate_influence = {
+							estate = estate_nobles
+							influence = 85
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					advisor = army_reformer
+				}
+				add_country_modifier = {
+					name = sco_highlander_warriors
+					duration = 3650
+				}
+			}
+			else = {
+				create_general = { tradition = 75 }
+			}
+		}
+	}
+
+	sco_the_lord_of_the_isles = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 2
+		required_missions = { sco_raise_the_warrior_clans }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_west_midlands_metal = {
+		icon = mission_cannons_firing
+		position = 3
+		required_missions = { sco_advance_the_frontier }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_eradicate_the_marcher_lords = {
+		icon = 	mission_conquer_50_development
+		position = 4
+		required_missions = { sco_west_midlands_metal }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_nemo_impuna_lacessit = {
+		icon = mission_rb_scottish_conquer_london
+		position = 6
+		required_missions = { sco_eradicate_the_marcher_lords sco_williams_legacy }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_land_in_normandy = {
+		icon = mission_landsknecht_soldier
+		position = 7
+		required_missions = { sco_nemo_impuna_lacessit }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_channel_supremacy = {
+		icon = mission_establish_high_seas_navy
+		position = 8
+		required_missions = { sco_secure_holland sco_land_in_normandy sco_employ_the_flemings }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_rex_europa = {
+		icon = mission_empire
+		position = 9
+		required_missions = { sco_the_fires_of_production sco_channel_supremacy sco_the_blue_guard }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_scottish_renaissance = {
+		icon = mission_early_modern_university
+		position = 11
+		required_missions = { sco_the_stuart_tradition }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_the_falkland_palace = {
+		icon = mission_rb_trinity_college_dublin
+		position = 13
+		required_missions = { sco_scottish_renaissance }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+}
+
+scotland_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCO
+		#has_country_flag = use_missions_expanded_missions_instead_of_paradox
+	}
+	has_country_shield = yes
+
+	sco_advance_the_frontier = {
+		icon = mission_rb_unite_the_clans
+		position = 2
+		required_missions = { sco_raise_the_warrior_clans }
+		provinces_to_highlight = {
+			area = scottish_marches_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = sco_marshy_march
+				duration = 7300
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	sco_the_isles = {
+		icon = mission_invade_island
+		position = 5
+		required_missions = { sco_eradicate_the_marcher_lords }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_employ_the_flemings = {
+		icon = mission_dominate_home_trade_node
+		position = 7
+		required_missions = { sco_nemo_impuna_lacessit }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_the_stuart_tradition = {
+		icon = mission_rb_conquer_scotland
+		position = 10
+		required_missions = { sco_the_douglas_incident }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_gunpowder_of_edinburgh = {
+		icon = mission_guilds_of_barcelona
+		position = 11
+		required_missions = { sco_the_stuart_tradition }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_the_papal_rose = {
+		icon = mission_hands_praying
+		position = 12
+		required_missions = { sco_scottish_renaissance }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+}
+
+scotland_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = SCO
+		#has_country_flag = use_missions_expanded_missions_instead_of_paradox
+	}
+	has_country_shield = yes
+
+	sco_break_the_council = {
+		icon = mission_rb_invade_england
+		position = 3
+		required_missions = { sco_advance_the_frontier }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_east_midlands = {
+		icon = mission_rb_into_england
+		position = 4
+		required_missions = { sco_break_the_council }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_williams_legacy = {
+		icon = mission_rb_rule_britannia_scottish_version
+		position = 5
+		required_missions = { sco_east_midlands }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_found_the_three_branches = {
+		icon = mission_the_austrian_succession
+		position = 6
+		required_missions = { }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_the_blue_guard = {
+		icon = mission_assemble_an_army
+		position = 8
+		required_missions = { sco_found_the_three_branches }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_the_douglas_incident = {
+		icon = mission_alliances
+		position = 9
+		required_missions = { }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+
+	sco_restore_the_parliament = {
+		icon = mission_restore_kiev
+		position = 9
+		required_missions = { sco_the_douglas_incident }
+		trigger = {
+		}
+		effect = {
+		}
+	}
+}

@@ -1,0 +1,39 @@
+# Missions:
+sco_marshy_march = {
+	movement_speed = 0.2 
+}
+sco_gaelic_wars = {
+	war_exhaustion = -0.03
+	ae_impact = -0.1 
+}
+sco_highlander_warriors = {
+	shock_damage = 0.1 
+}
+sco_prosperous_potato_harvests = {
+	local_production_efficiency = 0.15
+}
+sco_protoindustrialization = {
+	trade_goods_size_modifier = 0.10
+}
+sco_increased_production_quotas = {
+	trade_goods_size_modifier = 0.15
+}
+sco_royal_mercantile_seal = {
+	global_prov_trade_power_modifier = 0.20
+	light_ship_cost = -0.2
+}
+sco_scottish_vacation = {
+	expel_minorities_cost = -0.25 
+}
+sco_clan_cooperation = {
+	core_creation = -0.15
+	global_autonomy = -0.05 
+}
+sco_domination_of_the_channel = {
+	trade_efficiency = 0.1
+	dip_tech_cost_modifier = -0.1
+}
+sco_kings_mercantile_navy = {
+	global_ship_trade_power = 0.25
+	placed_merchant_power = 10
+}
